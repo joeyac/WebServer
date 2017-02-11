@@ -1,0 +1,82 @@
+{% load bootstrap3 %}
+<div class="modal fade" id="login-modal" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h3 class="modal-title">Login</h3>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid" id="sign-in">
+                    <div class="row">
+
+                        <form class="form-horizontal" id="login-form">
+                            <div class="form-group">
+                                <label for="username" class="col-sm-2 col-sm-offset-2 control-label">Username: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="username" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="password" class="col-sm-2 col-sm-offset-2 control-label">Password: </label>
+                                <div class="col-sm-5">
+                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <span id="login-msg-box" class="alert alert-danger" style="height: 60px; margin: 0 0 20px; display: none;"></span>
+                <button type="button" id="btn-login" class="btn btn-primary">Login</button>
+                <button type="button" id="btn-login-register" class="btn btn-default">Register</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+$(window).load(function(){
+
+$('#btn-login').click(function(){
+    $('#login-msg-box').show();
+    $('#login-msg-box').html('<i class="fa fa-spinner fa-pulse"></i>validating...');
+    var button = this;
+    $(this).attr("disabled","disabled");
+
+    var username = $("#username").val();
+    var password = $("#password").val();
+
+    $.ajax({
+             type: "POST",
+             url: "{% url 'login' %}",
+             data: {    'username': username,
+                        'password': password,
+                        'csrfmiddlewaretoken': '{{csrf_token}}'},
+             dataType: "json",
+             success: function(response) {
+                    $('#login-msg-box').html(response.replace(/\"/g, ""));
+                    setTimeout(function () {
+                        $('#login-modal').modal('hide');
+                        location.reload();
+                    }, 1000);
+              },
+              error: function(jqXHR, exception) {
+
+                    $('#login-msg-box').html(jqXHR.responseText.replace(/\"/g, ""));
+                    $(button).removeAttr("disabled");
+              }
+        });
+  })
+
+$('#btn-login-register').click(function(){
+    $('#login-modal').modal('hide');
+    $('#register-modal').modal('show');
+  })
+
+})
+</script>

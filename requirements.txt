@@ -1,0 +1,11 @@
+BeautifulSoup
+pygments
+django
+djangorestframework
+markdown
+django-filter
+django_summernote
+django-bootstrap3
+django-fontawesome
+django-datatable
+django-ajax-selects

@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load table_tags %}
+
+{% block title %}Problem List{% endblock %}
+{% block body %}
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-lg-9">
+            <div>
+            {% render_table problems %}
+            </div>
+            {% if tag %}
+            <div>
+                <h2 class="text-center">{{ tag.name }}</h2>
+                    <div class="tag-section well">
+                        {% autoescape off %}
+                            {{ tag.intro }}
+                        {% endautoescape %}
+                    </div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                        Tag
+                        <span  style="float:right;">
+                            <a href="{% url 'problem_list' %}">
+                                {% if tag %}
+                                <i class="fa fa-spin fa-refresh" aria-hidden="true"></i>
+                                {% else %}
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                                {% endif %}
+                                <!-- <i class="fa fa-pulse fa-refresh" aria-hidden="true"></i> -->
+                            </a>
+                        </span>
+                    </h3>
+                </div>
+                <ul class="list-group">
+                    {% for item in tags %}
+                        <li class="list-group-item problem-tag">
+                        <a class="tag-link" id="tag-link" href="{% url 'tag_problem_list' item.id %}">{{ item.name }}</a>
+                        <span class="badge">{{ item.problem_number }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <button type="button" class="btn btn-primary" id="test-button">
+                    TEST
+                </button>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block js_block %}
+
+
+<script>
+$(document).ready(function(){
+
+    var table = $('#problemtable').DataTable();
+    {% if tag %}
+
+    var tag = "{{ tag.short_name | safe }}";
+    table.search("*"+tag+" ").draw();
+    {% endif %}
+    if (!$("#nav-problem").hasClass('active')) {
+    $("#nav-problem").addClass('active');
+    }
+
+    $('#problemtable tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+
+
+    $( "#test-button" ).click(function() {
+        var table = $('#problemtable').DataTable();
+        table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+            var data = this.data();
+            if(data[5]=="ZJCPC2004"){
+                data[5]="test";
+                table.row( this ).data( data );
+            }
+        } );
+
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load highlighting %}
+{% block title %}USTBOJ{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to USTBOJ 1.0!</h1>
+        <p>
+            IE 7+, Opera 11+, Safari 5+, Firefox 5+ and Chrome 14+ are <span class="badge badge-important"><b>REQUIRED</b></span>
+            according to <a href="https://github.com/twitter/bootstrap/wiki/Browser-Compatibility" target='_blank'>Bootstrap compatibility page</a>.<br />
+            Enjoy and have fun!
+        </p>
+    </div>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6 col-sm-4">
+            <h3>VJudge Status</h3>
+            By checking remote status page every 10 minutes.
+            <table class='table table-hover table-striped table-condensed' width='100%'>
+                <thead>
+                    <tr>
+                        <th width='70%'>OJ</th>
+                        <th width='30%'>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr title='Last Check: 2017-01-18 10:40:02, Normal'>
+                        <td>ACdream</td>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+
+                    </tr>
+                    <tr title='Last Check: 2017-01-18 10:40:03, Normal'>
+                        <td>Aizu</td>
+                        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr title='Last Check: 2017-01-18 10:40:03, Normal'>
+                        <td>Codeforces GYM</td>
+                        <td><i class="fa fa-cog fa-spin"></i></td>
+                    </tr>
+                    <tr title='Last Check: 2017-01-18 10:40:03, Normal'>
+                        <td>POJ</td>
+                        <td><a><i class="fa fa-exclamation-triangle " aria-hidden="true"></i></a></td>
+                    </tr>
+                    <tr title='Last Check: 2017-01-18 10:40:03, Normal'>
+                        <td>HDU</td>
+                        <td><a><i class="fa fa-cog fa-spin"></i></a></td>
+                    </tr>
+                    <tr title='Last Check: 2017-01-18 10:40:03, Normal'>
+                        <td>Codeforces</td>
+                        <td><i class="fa fa-spinner fa-pulse"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <h3>Latest News
+                <span style="font-size:12px">
+                    <a href="#">[more...]</a>
+                </span>
+            </h3>
+            <h4>Hello World!</h4>
+            <p>Here's where we'll put our latest news!<a name="1" class="link" href="#">[...]</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <h3>Todo list</h3>
+                <ol>
+                    <li>build the front web page</li>
+                    <li>User problem submission contest</li>
+                    <li>Virtual Judge on many OJs</li>
+                    <li>Rank list</li>
+                    <li>Discuss</li>
+                    <li></li>
+                </ol>
+        </div>
+        {{code|highlight|safe}}
+    </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block js_block %}
+
+
+{% endblock %}

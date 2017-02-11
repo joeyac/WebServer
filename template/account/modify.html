@@ -1,0 +1,127 @@
+{% load bootstrap3 %}
+<div class="modal fade" id="modify-modal" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h3 class="modal-title">Modify My Information</h3>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid" id="modify">
+                    <div class="row">
+
+                        <form class="form-horizontal" id="modify-form">
+
+                            <div class="form-group">
+                                <label for="modify-username" class="col-sm-2 col-sm-offset-2 control-label">Username: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="modify-username" placeholder="Username" value="{{ request.user.username }}" readonly>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label  for="modify-password" class="col-sm-2 col-sm-offset-2 control-label">Password: </label>
+                                <div class="col-sm-5">
+                                    <input type="password" class="form-control" id="modify-password" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="modify-new-password" class="col-sm-2 col-sm-offset-2 control-label">New: </label>
+                                <div class="col-sm-5">
+                                    <input type="password" class="form-control" id="modify-new-password" placeholder="New Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="modify-confirm-password" class="col-sm-2 col-sm-offset-2 control-label">Confirm: </label>
+                                <div class="col-sm-5">
+                                    <input type="password" class="form-control" id="modify-confirm-password" placeholder="Confirm Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="modify-email" class="col-sm-2 col-sm-offset-2 control-label">Email: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="modify-email" placeholder="Email Address" value="{{ request.user.email }}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="modify-nickname" class="col-sm-2 col-sm-offset-2 control-label">Nickname: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="modify-nickname" placeholder="Nickname" value="{{ request.user.profile.nickname }}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="modify-school" class="col-sm-2 col-sm-offset-2 control-label">School: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="modify-school" placeholder="School" value="{{ request.user.profile.school }}">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <span id="modify-msg-box" class="alert alert-danger" style="height: 60px; margin: 0 0 20px; display: none;"></span>
+                <button type="button" id="btn-modify" class="btn btn-primary">Submit</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+$(window).load(function(){
+
+$('#btn-modify').click(function(){
+    $('#modify-msg-box').show();
+    $('#modify-msg-box').html('<i class="fa fa-spinner fa-pulse"></i>validating...');
+    var button = this;
+    $(this).attr("disabled","disabled");
+
+    var username = $("#modify-username").val();
+    var password = $("#modify-password").val();
+    var new_password = $("#modify-new-password").val();
+    var confirm_password = $("#modify-confirm-password").val();
+    var email = $("#modify-email").val();
+
+    var nickname = $("#modify-nickname").val();
+    var school = $("#modify-school").val();
+    $.ajax({
+             type: "POST",
+             url: "{% url 'modify' %}",
+             data: {    'username': username,
+                        'password': password,
+                        'new_password': new_password,
+                        'confirm_password': confirm_password,
+                        'email': email,
+                        'nickname': nickname,
+                        'school': school,
+                        'csrfmiddlewaretoken': '{{csrf_token}}'},
+             dataType: "json",
+             success: function(response) {
+                    $('#modify-msg-box').html(response.replace(/\"/g, ""));
+                        setTimeout(function () {
+                            $('#modify-modal').modal('hide');
+                            location.reload();
+                        }, 1000);
+              },
+              error: function(jqXHR, exception) {
+                    $('#modify-msg-box').html(jqXHR.responseText.replace(/\"/g, ""));
+                    $(button).removeAttr("disabled");
+              }
+        });
+  })
+
+$('#btn-modify-modify').click(function(){
+    $('#modify-modal').modal('hide');
+    $('#modify-modal').modal('show');
+  })
+
+})
+</script>

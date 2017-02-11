@@ -1,0 +1,113 @@
+重新确定思路
+对于需要api的地方
+使用rest_framework构建API
+不需要使用api的地方
+依旧使用form等django常规组件进行开发
+
+
+
+<script>
+$('.navbar li').click(function(e) {
+    $('.navbar li.active').removeClass('active');
+    var $this = $(this);
+    if (!$this.hasClass('active')) {
+        $this.addClass('active');
+    }
+    e.preventDefault();
+});
+</script>
+
+
+
+<p class="text-center text-muted">Copyright &copy; USTBOJ 2016</p>
+<p class="text-center text-muted"> Powered by&nbsp;<a href="http://jingwei.site/" target="__bank"     >CrazyX</a></p>
+
+<p class="text-center text-muted"><strong>USTB-CS</strong></p>
+<p class="text-center text-muted">©All rights reserved</p>
+<h5 class="text-center text-muted"> Powered by&nbsp;<a href="http://jingwei.site/"  text-muted>CrazyX</a></h5>
+
+
+
+
+http://stackoverflow.com/questions/1639555/return-get-data-in-a-function-using-jquery
+function showGetResult( name )
+{
+     var result = null;
+     var scriptUrl = "somefile.php?name=" + name;
+     $.ajax({
+        url: scriptUrl,
+        type: 'get',
+        dataType: 'html',
+        async: false,
+        success: function(data) {
+            result = data;
+        }
+     });
+     return result;
+}
+var D = new Date((new Date(now_time)).valueOf() + 1);
+
+
+function setTime(now_time){
+    var D=new Date(now_time);
+    D.setSeconds(D.getSeconds() + 1);
+    var year = D.getFullYear();
+    var month = D.getMonth() + 1;
+    if (month < 10) {
+    month = "0" + month;
+    }
+    var date = D.getDate() + 1;
+    if (date < 10) {
+    date = "0" + date;
+    }
+    var hour = D.getHours();
+    if (hour < 10) {
+    hour = "0" + hour;
+    }
+    var minute = D.getMinutes();
+    if (minute < 10) {
+    minute = "0" + minute;
+    }
+    var second = D.getSeconds();
+    if (second < 10) {
+    second = "0" + second;
+    }
+    var result = year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+	document.getElementById("server-time").innerHTML = result;
+	return D.toISOString();
+}
+
+
+
+# dick sim required:
+1.delete the makefile unused system
+2.install flex
+
+
+
+footer:
+                        <li>
+                            <a href="https://twitter.com/CrazyX_CN" target="__bank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://weibo.com/u/5373037904" target="__bank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/joeyac" target="__bank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>

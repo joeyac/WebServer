@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+
+
+    {# Load the tag library #}
+    {% load bootstrap3 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <!-- Optional theme -->
+
+    {% load staticfiles %}
+
+
+
+    <!-- global css begin -->
+    <!-- change bootstrap style -->
+    {% with request.session.theme|default:"journal" as theme_name %}
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/{{theme_name}}/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    {% endwith %}
+    <!-- change highlighting style -->
+    {% with request.session.highlight|default:"emacs" as style_name %}
+    {% with "css/highlight/"|add:style_name|add:".css" as css_name %}
+    <link rel="stylesheet" type="text/css" href="{% static css_name %}">
+    {% endwith %}
+    {% endwith %}
+    <!-- Custom Fonts -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- global css end -->
+
+    <!-- custom css begin -->
+    {% block css_block %}{% endblock %}
+    <!-- custom css end -->
+
+    <title>
+        {% block title %}
+        USTBOJ
+         {% endblock %}
+    </title>
+
+
+
+</head>
+<body style="font-family: sans-serif;">
+
+<!-- nav begin -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'homepage' %}">USTBOJ</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" id="nav">
+                    <li class="dropdown" id="nav-problem">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Problem <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id="localp"><a href="#">Local Problems</a></li>
+                            <li id="allp"><a href="{% url 'problem_list' %}">All Problems</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Problem ID" id="problem_id">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button" id="go-problem-btn">Go!</button>
+                                    </span>
+                                </div>
+                            </li>
+                            <!--               <li id="categoryp"><a href="#">Problem Category</a></li>                         -->
+
+                        </ul>
+                    </li>
+
+                    <li id="status"><a href="#">Status</a></li>
+
+                    <li class="dropdown" id="contest">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contest <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id="repcontest"><a href="#">Replay Contests</a></li>
+                            <li id="vcontest"><a href="#">Virtual Contests</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">contest format</li>
+                            <li id="stdcontest"><a href="#">Standard Contests</a></li>
+                            <li id="icpccontest"><a href="#">Contests (ICPC format)</a></li>
+                            <li id="cfcontest"><a href="#">Contests (CF format)</a></li>
+                        </ul>
+                    </li>
+
+                    <li id="ranklist"><a href="#">Ranklist</a></li>
+
+                    <li class="dropdown" id="more">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More... <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id="discuss"><a href="discuss.php">Discuss</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Recent Contests</a></li>
+                            <li class="divider"></li>
+                            <li class="disabled"><a>Coming Soon...</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <p class="navbar-text text-muted"><span id="server-time"></span></p>
+
+                    {% if request.user.is_authenticated %}
+                        <ul id="logout-bar" class="nav navbar-nav navbar-right">
+                            <li class="dropdown" id="user-space">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ request.user.username }} <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Show My Information</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#modify-modal">Modify My Information</a></li>
+                                {% if request.user.is_staff %}
+                                    <li><a href="#">Administration</a></li>
+                                {% endif %}
+                                    <li id="logout-button"><a href="{% url 'logout' %}" id="logout">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    {% else %}
+                        <ul id="login-bar" class="nav navbar-nav navbar-right">
+                          <li id="login-button"><a href="#" data-toggle="modal" data-target="#login-modal" id="login">Login</a></li>
+                          <li id="register-button"><a href="#" data-toggle="modal" data-target="#register-modal" id="register">Register</a></li>
+                        </ul>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<script>
+    $("#go-problem-btn").click(function(){
+        var problem_id = $("#problem_id").val();
+        if(isNaN(problem_id)){
+            alert("Only can input number!");
+            $("#problem_id").val("");
+        }else{
+            problem_id = problem_id - 999;
+            var url = '{% url 'problem_detail' "0" %}';
+            url = url.replace('0', problem_id);
+            location.href = url;
+        }
+    });
+     $("#problem_id").keydown(function() {
+         if (event.keyCode == "13") {
+             $('#go-problem-btn').click();
+         }
+     });
+</script>
+
+<script>
+function getServerTime(){
+    var result = null;
+
+    $.ajax({
+        url: "{% url 'server_time' %}",
+        type: 'get',
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            result = data;
+        }
+     });
+    return result;
+
+}
+function serverTime(now_time){
+    if(now_time === undefined){
+     now_time = getServerTime();
+    }
+    var D=new Date(now_time);
+    D.setSeconds(D.getSeconds() + 1);
+    var year = D.getFullYear();
+    var month = D.getMonth() + 1;
+    if (month < 10) {
+    month = "0" + month;
+    }
+    var date = D.getDate() + 1;
+    if (date < 10) {
+    date = "0" + date;
+    }
+    var hour = D.getHours();
+    if (hour < 10) {
+    hour = "0" + hour;
+    }
+    var minute = D.getMinutes();
+    if (minute < 10) {
+    minute = "0" + minute;
+    }
+    var second = D.getSeconds();
+    if (second < 10) {
+    second = "0" + second;
+    }
+    var result = year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+	document.getElementById("server-time").innerHTML = result;
+	return D.toISOString();
+}
+    var now_time = serverTime();
+    setInterval(function () {
+        now_time = serverTime(now_time);
+    }, 1000);
+</script>
+<!-- nav end -->
+
+<!-- custom body begin -->
+{% block body %}
+{% endblock %}
+{% include 'account/login.html' %}
+{% include 'account/register.html' %}
+{% include 'account/modify.html' %}
+<!-- custom body end -->
+
+{% block js_block %}{% endblock %}
+
+
+
+
+<!-- Footer -->
+    <footer>
+        <br /><br /><br /><br /><br />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/CrazyX_CN" target="__bank">
+                                <span class="fa-stack fa-lg">
+                                    {% ifequal request.session.theme 'slate' %}
+                                        <i class="fa fa-twitter fa-stack-2x"></i>
+                                    {% else %}
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    {% endifequal %}
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://weibo.com/u/5373037904" target="__bank">
+                                <span class="fa-stack fa-lg">
+                                    {% ifequal request.session.theme 'slate' %}
+                                        <i class="fa fa-weibo fa-stack-2x"></i>
+                                    {% else %}
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                    {% endifequal %}
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/joeyac" target="__bank">
+                                <span class="fa-stack fa-lg">
+                                    {% ifequal request.session.theme 'slate' %}
+                                        <i class="fa fa-github fa-stack-2x"></i>
+                                    {% else %}
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    {% endifequal %}
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="text-center text-muted">Copyright &copy; USTBOJ 2016</p>
+                    <p class="text-center text-muted"> Powered by&nbsp;<a href="http://jingwei.site/" target="__bank"     >CrazyX</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" id="theme-class">
+                    Theme:
+                    <button class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" href="#" id="theme-btn">{{ request.session.theme|default:"readable" }}<span class="caret"></span></button>
+                    <ul class="dropdown-menu" id="theme">
+                        <li><a href="{% url 'set_theme' 'cerulean' %}">Cerulean</a></li>
+                        <li><a href="{% url 'set_theme' 'cosmo' %}">Cosmo</a></li>
+                        <li><a href="{% url 'set_theme' 'cyborg' %}">Cyborg</a></li>
+                        <li><a href="{% url 'set_theme' 'darkly' %}">Darkly</a></li>
+                        <li><a href="{% url 'set_theme' 'flatly' %}">Flatly</a></li>
+                        <li><a href="{% url 'set_theme' 'journal' %}">Journal</a></li>
+                        <li><a href="{% url 'set_theme' 'lumen' %}">Lumen</a></li>
+                        <li><a href="{% url 'set_theme' 'paper' %}">Paper</a></li>
+                        <li><a href="{% url 'set_theme' 'readable' %}">Readable</a></li>
+                        <li><a href="{% url 'set_theme' 'sandstone' %}">Sandstone</a></li>
+                        <li><a href="{% url 'set_theme' 'simplex' %}">Simplex</a></li>
+                        <li><a href="{% url 'set_theme' 'slate' %}">Slate</a></li>
+                        <li><a href="{% url 'set_theme' 'spacelab' %}">Spacelab</a></li>
+                        <li><a href="{% url 'set_theme' 'superhero' %}">Superhero</a></li>
+                        <li><a href="{% url 'set_theme' 'united' %}">United</a></li>
+                        <li><a href="{% url 'set_theme' 'yeti' %}">Yeti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <style>
+        #theme-class {
+            text-align:center;
+        }
+        #theme {
+          left: 50%;
+          right: auto;
+          text-align: center;
+          transform: translate(-50%, 0);
+        }
+        </style>
+
+        <script>
+            $("#theme li a").click(function(){
+                var selText = $(this).text();
+                $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+            });
+        </script>
+    </footer>
+</body>
+</html>

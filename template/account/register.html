@@ -1,0 +1,120 @@
+{% load bootstrap3 %}
+<div class="modal fade" id="register-modal" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h3 class="modal-title">Register</h3>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid" id="register">
+                    <div class="row">
+
+                        <form class="form-horizontal" id="register-form">
+
+                            <div class="form-group">
+                                <label for="register-username" class="col-sm-2 col-sm-offset-2 control-label">Username: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="register-username" placeholder="Username">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label  for="register-password" class="col-sm-2 col-sm-offset-2 control-label">Password: </label>
+                                <div class="col-sm-5">
+                                    <input type="password" class="form-control" id="register-password" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="register-confirm-password" class="col-sm-2 col-sm-offset-2 control-label">Confirm: </label>
+                                <div class="col-sm-5">
+                                    <input type="password" class="form-control" id="register-confirm-password" placeholder="Confirm Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="register-email" class="col-sm-2 col-sm-offset-2 control-label">Email: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="register-email" placeholder="Email Address">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="register-nickname" class="col-sm-2 col-sm-offset-2 control-label">Nickname: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="register-nickname" placeholder="Nickname">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label  for="register-school" class="col-sm-2 col-sm-offset-2 control-label">School: </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="register-school" placeholder="School">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <span id="register-msg-box" class="alert alert-danger" style="height: 60px; margin: 0 0 20px; display: none;"></span>
+                <button type="button" id="btn-register" class="btn btn-primary">Submit</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+$(window).load(function(){
+
+$('#btn-register').click(function(){
+    $('#register-msg-box').show();
+    $('#register-msg-box').html('<i class="fa fa-spinner fa-pulse"></i>validating...');
+    var button = this;
+    $(this).attr("disabled","disabled");
+
+    var username = $("#register-username").val();
+    var password = $("#register-password").val();
+    var confirm_password = $("#register-confirm-password").val();
+    var email = $("#register-email").val();
+
+    var nickname = $("#register-nickname").val();
+    var school = $("#register-school").val();
+    $.ajax({
+             type: "POST",
+             url: "{% url 'register' %}",
+             data: {    'username': username,
+                        'password': password,
+                        'confirm_password': confirm_password,
+                        'email': email,
+                        'nickname': nickname,
+                        'school': school,
+                        'csrfmiddlewaretoken': '{{csrf_token}}'},
+             dataType: "json",
+             success: function(response) {
+                    $('#register-msg-box').html(response.replace(/\"/g, ""));
+                        setTimeout(function () {
+                            $('#register-modal').modal('hide');
+                            $('#login-modal').modal('show');
+                            $(button).removeAttr("disabled");
+                        }, 1000);
+              },
+              error: function(jqXHR, exception) {
+
+                    $('#register-msg-box').html(jqXHR.responseText.replace(/\"/g, ""));
+                    $(button).removeAttr("disabled");
+              }
+        });
+  })
+
+$('#btn-register-register').click(function(){
+    $('#register-modal').modal('hide');
+    $('#register-modal').modal('show');
+  })
+
+})
+</script>
