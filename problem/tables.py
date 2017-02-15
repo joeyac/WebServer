@@ -58,7 +58,7 @@ class ProblemTable(Table):
                        links=[Link(text=A('title'), viewname='problem_detail', args=(A('problem_id'),))])
 
     source = Column(field='source', header=u'Source')
-    create_time = DatetimeColumn(field='create_time', header=u'Create Time', header_attrs={'width': '18%'})
+    create_time = DatetimeColumn(field='create_time', header=u'Create Time', header_attrs={'width': '20%'})
 
 
     class Meta:

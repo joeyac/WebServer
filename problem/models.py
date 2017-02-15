@@ -59,6 +59,8 @@ class Problem(models.Model):
 
     visible = models.BooleanField(default=True)
 
+    test_case_id = models.CharField(blank=True, null=True, max_length=20)
+
 
     remote_submission_user_number = models.IntegerField(default=-1)
     remote_accepted_user_number = models.IntegerField(default=-1)

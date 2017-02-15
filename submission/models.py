@@ -14,8 +14,8 @@ class Submission(models.Model):
     # http://stackoverflow.com/questions/7684408/django-cannot-import-name-x
     problem = models.OneToOneField('problem.Problem')
 
-    # contest
 
+    # base info
     language = models.IntegerField(choices=list(RE_languages.items()))
     code = models.TextField()
     shared = models.BooleanField(default=False)
@@ -33,10 +33,21 @@ class Submission(models.Model):
     judge_start_time = models.DateTimeField(blank=True, null=True)
     judge_end_time = models.DateTimeField(blank=True, null=True)
 
+    # virtual judge info
+    v_run_id = models.CharField(blank=True, null=True, max_length=100)
+    v_language = models.CharField(blank=True, null=True, max_length=50)
+    v_length = models.CharField(blank=True, null=True, max_length=20)
+    v_user = models.CharField(blank=True, null=True, max_length=50)
+    v_submit_time = models.CharField(blank=True, null=True, max_length=50)
+    v_time = models.CharField(blank=True, null=True, max_length=30)
+    v_memory = models.CharField(blank=True, null=True, max_length=30)
+    v_status = models.CharField(blank=True, null=True, max_length=30)
+
+    # contest
+
     @property
     def code_length(self):
-        code = str(self.code)
-        return len(code)
+        return len(self.code.encode('utf-8'))
 
     def __str__(self):
         return self.submission_id

@@ -21,6 +21,8 @@ class OJ(models.Model):
 
     exist_problem_number = models.IntegerField(default=0)
 
+    
+
     def update(self, number):
         self.exist_problem_number = number
 
