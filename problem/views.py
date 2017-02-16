@@ -2,7 +2,7 @@
 from problem.tables import ProblemTable
 from problem.models import Problem, ProblemTag
 
-from utils.result import RESULT, languages
+from utils.result import RESULT, front_lang
 
 from table.views import FeedDataView
 
@@ -19,7 +19,7 @@ def problem_detail(request, problem_id):
     data = {
         'problem': problem,
         'result': RESULT,
-        'languages': languages,
+        'languages': front_lang[problem.oj_name],
     }
 
     return render(request, 'problem/problem_detail.html', data)

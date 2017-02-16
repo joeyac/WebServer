@@ -16,11 +16,14 @@ class Submission(models.Model):
 
 
     # base info
-    language = models.IntegerField(choices=list(RE_languages.items()))
+    # language = models.IntegerField(choices=list(RE_languages.items()))
+    language = models.CharField(blank=True, null=True, max_length=50)
+
     code = models.TextField()
     shared = models.BooleanField(default=False)
 
-    status = models.IntegerField(default=RESULT['waiting'], choices=list(RE_RESULT.items()))
+    # status = models.IntegerField(default=RESULT['waiting'], choices=list(RE_RESULT.items()))
+    status = models.CharField(default='waiting', max_length=20)
 
     time = models.IntegerField(blank=True, null=True)  # ms
 
@@ -35,13 +38,13 @@ class Submission(models.Model):
 
     # virtual judge info
     v_run_id = models.CharField(blank=True, null=True, max_length=100)
-    v_language = models.CharField(blank=True, null=True, max_length=50)
+    # v_language = models.CharField(blank=True, null=True, max_length=50)
     v_length = models.CharField(blank=True, null=True, max_length=20)
     v_user = models.CharField(blank=True, null=True, max_length=50)
     v_submit_time = models.CharField(blank=True, null=True, max_length=50)
-    v_time = models.CharField(blank=True, null=True, max_length=30)
-    v_memory = models.CharField(blank=True, null=True, max_length=30)
-    v_status = models.CharField(blank=True, null=True, max_length=30)
+    # v_time = models.CharField(blank=True, null=True, max_length=30)
+    # v_memory = models.CharField(blank=True, null=True, max_length=30)
+    # v_status = models.CharField(blank=True, null=True, max_length=30)
 
     # contest
 

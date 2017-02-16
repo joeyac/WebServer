@@ -5,107 +5,28 @@
 {% endblock %}
 {% block body %}
     <div class="container main">
-        <ul class="nav nav-tabs nav-tabs-google">
-            <li role="presentation" class="active">
-                <a href="{% url 'problem_detail' problem.problem_id %}">Problem</a>
-            </li>
-            {% if request.user.is_authenticated %}
-                <li role="presentation">
-                    <a href="#">My Submission</a>
-                </li>
-            {% endif %}
-        </ul>
+        <div class="row">
+            <div class="col-md-9 col-lg-9">asd</div>
+            <div class="col-md-3 col-lg-3 container" id="right-panel">
+                <div id="operation">
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="#" class="btn btn-primary" id="btn-submit"
+                                data-toggle="modal" data-target="#submit-modal">
+                            <i class="fa fa-upload"></i>
+                            Submit
+                        </a>
+                    </div>
 
-         <!-- problem header -->
-        <h2 class="text-center">{{ problem.title }}</h2>
-        <p class="text-muted text-center">
-            Pub time: {{ problem.create_time }}&nbsp;&nbsp;
-            Update time: {{ problem.last_update_time }}&nbsp;&nbsp;
-            {% if problem.source %}Source： {{problem.source}}&nbsp;&nbsp; {% endif %}
-        </p>
-        <p class="text-muted text-center">
-            Time Limit: {{ problem.time_limit }} MS
-            Memory Limit: {{ problem.memory_limit }} KB
-            OS: {{ problem.os }}
-        </p>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="#" class="btn btn-default" id="btn-submissions">
+                            Submissions
+                        </a>
+                    </div>
 
-        <!--problem main info-->
-        <div class="problem-section">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Problem Description</h3>
-                </div>
-                <div class="panel-body">
-                    {% autoescape off %}
-                        {{problem.description}}
-                    {% endautoescape %}
                 </div>
             </div>
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Input Description</h3>
-                </div>
-                <div class="panel-body">
-                    {% autoescape off %}
-                        {{problem.input_description}}
-                    {% endautoescape %}
-                </div>
-            </div>
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Output Description</h3>
-                </div>
-                <div class="panel-body">
-                    {% autoescape off %}
-                        {{problem.output_description}}
-                    {% endautoescape %}
-                </div>
-            </div>
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Input Sample</h3>
-                </div>
-                <div class="panel-body" style="font-family:Courier New,Courier,monospace;">
-                    {% autoescape off %}
-                        {{problem.input_sample}}
-                    {% endautoescape %}
-                </div>
-            </div>
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Output Sample</h3>
-                </div>
-                <div class="panel-body" style="font-family:Courier New,Courier,monospace;">
-                    {% autoescape off %}
-                        {{problem.output_sample}}
-                    {% endautoescape %}
-                </div>
-            </div>
-
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Hint</h3>
-                </div>
-                <div class="panel-body">
-                    {% autoescape off %}
-                        {{problem.hint}}
-                    {% endautoescape %}
-                </div>
-            </div>
-
         </div>
 
-        <!--problem bottom-->
-        <div class="text-right">
-            <button type="button" class="btn btn-primary" id="submit-code-button">
-                    Submit
-                </button>
-        </div>
     </div>
 {% endblock %}
 {% block js_block %}
@@ -117,4 +38,5 @@ $(document).ready(function(){
 });
 </script>
     {% include "_mathjax_js.html" %}
+    {% include 'submission/submit.html' %}
 {% endblock %}

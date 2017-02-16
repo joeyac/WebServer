@@ -49,3 +49,10 @@ RE_languages = {
     4: 'python2',
     5: 'python3',
 }
+
+front_lang = {
+    'USTBOJ': ['c', 'c++', 'java', 'python2', 'python3'] ,
+    'POJ': ['g++', 'gcc', 'java', 'pascal', 'c', 'c++', 'fortran'] ,
+    'HDU': ['g++', 'gcc', 'c++', 'c', 'pascal', 'java', 'c#'],
+    'Codeforces': ['g++', 'c', 'g++11', 'g++14', 'gcc', 'java', 'python2', 'python3'],
+}
