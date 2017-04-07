@@ -8,11 +8,6 @@ from utils.get_oj_problem import import_hdu_problem
 for i in range(1000,1100):
     import_hdu_problem(i)
 
-
-
-
-
-
 Theme = (
     'cerulean',
     'cosmo',

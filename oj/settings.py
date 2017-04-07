@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'account',
     'problem',
     'submission',
+    'judger',
 
 
 
@@ -58,6 +59,7 @@ INSTALLED_APPS = [
 
     'django_tables2',
     'table',
+
 ]
 
 MIDDLEWARE = [
@@ -280,10 +282,26 @@ BOOTSTRAP3 = {
 }
 
 
-
-
 # limit user submit
 TOKEN_BUCKET_DEFAULT_CAPACITY = 2
 
 # unit: minute
 TOKEN_BUCKET_FILL_RATE = 1
+
+# token for update status
+SERVER_TOKEN = 'server_token'
+
+
+# queue
+# CELERY SETTINGS
+CELERY_BROKER_URL = 'amqp://xjw:x970307jw@localhost/oj'
+CELERY_RESULT_BACKEND = 'rpc://'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_ENABLE_UTC = True
+
+
+# test case dir
+TEST_CASE_DIR = '/home/rhyme/code/DEV/oj-master/test_case/'

@@ -6,7 +6,77 @@
 {% block body %}
     <div class="container main">
         <div class="row">
-            <div class="col-md-9 col-lg-9">asd</div>
+            <div class="col-md-9 col-lg-9">
+
+                <div class="row" id="problem-title">
+                    <div id="prob-title">
+                        <h2 style="display:inline;">{{problem.title}}</h2>
+                        {% if origin_url %}
+                        <span class="origin">
+                            <a href="{{origin_url}}" target="_blank">
+                                {{problem.oj_name}} - {{problem.virtual_id}}
+                                <i class="fa fa-external-link"></i>
+                            </a>
+                        </span>
+                        {% else %}
+                        <span class="origin">
+                            {{problem.oj_name}} - {{problem.virtual_id}}
+                        </span>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 13px;">
+
+                        <dt>Description</dt>
+                        <dd>
+                            <div class="well well-sm">
+                            {% autoescape off %}
+                                {{problem.description}}
+                            {% endautoescape %}
+                            </div>
+                        </dd>
+
+                        <dt>Input</dt>
+                        <dd>
+                            <div class="well well-sm">
+                            {% autoescape off %}
+                                {{problem.input_description}}
+                            {% endautoescape %}
+                            </div>
+                        </dd>
+
+                        <dt>Output</dt>
+                        <dd>
+                            <div class="well well-sm">
+                            {% autoescape off %}
+                                {{problem.output_description}}
+                            {% endautoescape %}
+                            </div>
+                        </dd>
+
+                        <dt>Sample Input</dt>
+                        <dd>
+                            <div class="well well-sm"  style="font-family:Courier New,Courier,monospace;">
+                            {% autoescape off %}
+                                {{problem.input_sample}}
+                            {% endautoescape %}
+                            </div>
+                        </dd>
+
+                        <dt>Sample Output</dt>
+                        <dd>
+                            <div class="well well-sm"  style="font-family:Courier New,Courier,monospace;">
+                            {% autoescape off %}
+                                {{problem.output_sample}}
+                            {% endautoescape %}
+                            </div>
+                        </dd>
+
+                </div>
+
+            </div>
             <div class="col-md-3 col-lg-3 container" id="right-panel">
                 <div id="operation">
                     <div class="col-sm-6 col-lg-6">
@@ -18,11 +88,35 @@
                     </div>
 
                     <div class="col-sm-6 col-lg-6">
-                        <a href="#" class="btn btn-default" id="btn-submissions">
+
+                        <a href="{% url 'submission_list' %}{% if user %}?user={{ user }}{% endif %}" class="btn btn-default" id="btn-submissions">
                             Submissions
                         </a>
                     </div>
 
+                    <div class="col-sm-12 col-lg-12 well well-sm" id="conditions" style="margin-top: 30px;margin-left: 5px;">
+                        <dl class="card row" style="margin-bottom: 10px;">
+
+                            <dt class="col-sm-5">Time limit</dt>
+                            <dd class="col-sm-7">{{problem.time_limit}} ms</dd>
+
+                            <dt class="col-sm-5">Mem limit</dt>
+                            <dd class="col-sm-7">{{problem.memory_limit}} kB</dd>
+
+                            <dt class="col-sm-5" >OS</dt>
+                            <dd class="col-sm-7">{{problem.os}}</dd>
+
+                            {% if problem.source %}
+                            <dt class="col-sm-5">Source</dt>
+                            <dd class="col-sm-7">{{problem.source}}</dd>
+
+                            {%endif%}
+
+                        </dl>
+                    </div>
+                    <!--<div class="col-sm-12 col-lg-12">-->
+                        <!--test-->
+                    <!--</div>-->
                 </div>
             </div>
         </div>

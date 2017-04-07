@@ -32,7 +32,9 @@
                         <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
                         Tag
                         <span  style="float:right;">
-                            <a href="{% url 'problem_list' %}">
+                            {% if local %}<a href="{% url 'local_problem_list' %}">
+                            {% else %}<a href="{% url 'problem_list' %}">
+                            {% endif %}
                                 {% if tag %}
                                 <i class="fa fa-spin fa-refresh" aria-hidden="true"></i>
                                 {% else %}
@@ -46,15 +48,23 @@
                 <ul class="list-group">
                     {% for item in tags %}
                         <li class="list-group-item problem-tag">
-                        <a class="tag-link" id="tag-link" href="{% url 'tag_problem_list' item.id %}">{{ item.name }}</a>
+                            {% if local %}
+                            <a class="tag-link" href="{% url 'tag_local_problem_list' item.id %}">{{ item.name }}</a>
+                            {% else %}
+                            <a class="tag-link" href="{% url 'tag_problem_list' item.id %}">{{ item.name }}</a>
+                            {% endif %}
+
                         <span class="badge">{{ item.problem_number }}</span>
                         </li>
                     {% endfor %}
                 </ul>
             </div>
-            <button type="button" class="btn btn-primary" id="test-button">
-                    TEST
-                </button>
+            <!--<button type="button" class="btn btn-primary" id="test-button">-->
+                    <!--TEST-->
+                <!--</button>-->
+                            <!--<button type="button" class="btn btn-primary" id="test-button2">-->
+                    <!--TEST-->
+                <!--</button>-->
         </div>
     </div>
 
@@ -89,17 +99,35 @@ $(document).ready(function(){
     } );
 
 
-    $( "#test-button" ).click(function() {
-        var table = $('#problemtable').DataTable();
-        table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
-            var data = this.data();
-            if(data[5]=="ZJCPC2004"){
-                data[5]="test";
-                table.row( this ).data( data );
-            }
-        } );
 
-    });
 });
 </script>
 {% endblock %}
+
+    <!--$( "#test-button" ).click(function() {-->
+        <!--var table = $('#problemtable').DataTable();-->
+        <!--table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {-->
+            <!--var data = this.data();-->
+            <!--if(data[5]=="ZJCPC2004"){-->
+                <!--data[5]="test";-->
+                <!--table.row( this ).data( data );-->
+            <!--}-->
+        <!--} );-->
+    <!--});-->
+
+    <!--$( "#test-button2" ).click(function() {-->
+        <!--var table = $('#problemtable').dataTable();-->
+        <!--var val = 'ZJCPC2004';-->
+        <!--table.api().columns().every(function () {-->
+            <!--var column = this;-->
+            <!--var title = $(column.header()).html().trim();-->
+            <!--console.log(title);-->
+            <!--if (title == 'Source') {-->
+            <!--console.log(title);-->
+                <!--column-->
+                    <!--.search(val ? '^' + val + '$' : '', true, false)-->
+                    <!--.draw();-->
+
+            <!--}-->
+        <!--});-->
+    <!--});-->

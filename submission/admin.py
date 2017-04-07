@@ -3,10 +3,10 @@ from django_summernote.admin import SummernoteModelAdmin
 from submission.models import Submission
 
 
-class SubmissionAdmin(SummernoteModelAdmin):
-    list_display = ('submission_id', 'status', 'create_time',)
+class SubmissionAdmin(admin.ModelAdmin):
+    list_display = ('submission_id', 'problem', 'user', 'status', 'create_time',)
     list_display_links = ('submission_id',)
 
 
-
 admin.site.register(Submission, SubmissionAdmin)
+

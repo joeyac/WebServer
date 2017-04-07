@@ -29,7 +29,7 @@
                         <div class="col-md-9">
                             <select class="form-control custom-select" name="oj" id="oj-lang">
                                 {% for lang in languages %}
-                                <option value="{{ lang }}">{{ lang }}</option>
+                                <option value="{{ forloop.counter0 }}">{{ lang }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -61,11 +61,70 @@
             </div>
 
             <div class="modal-footer">
-                <span id="login-msg-box" class="alert alert-danger" style="height: 60px; margin: 0 0 20px; display: none;"></span>
-                <button type="button" id="btn-login" class="btn btn-primary">Submit</button>
-                <button type="button" id="btn-login-register" class="btn btn-default">Reset</button>
+                <span id="submit-msg-box" class="alert alert-danger" style="height: 60px; margin: 0 0 20px; display: none;"></span>
+                <button type="button" id="btn-submit-problem" class="btn btn-primary">Submit</button>
+                <button type="button" id="btn-reset-problem" class="btn btn-default">Reset</button>
 
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<script>
+$(window).load(function(){
+
+$('#btn-submit-problem').click(function(){
+    $('#submit-msg-box').show();
+    $('#submit-msg-box').html('<i class="fa fa-spinner fa-pulse"></i>submitting...');
+    var button = this;
+    $(this).attr("disabled","disabled");
+
+    var share = $('#submit-share label.active input').val();
+    var lang = $('#oj-lang').val();
+    var code = $('#submit-solution').val();
+
+    $.ajax({
+             type: "POST",
+             url: "{% url 'submit_code' %}",
+             data: {    'lang': lang,
+                        'shared': share,
+                        'code': code,
+                        'problem_id': {{ problem.problem_id }},
+                        'csrfmiddlewaretoken': '{{csrf_token}}'},
+             dataType: "json",
+             success: function(response) {
+                var data = response;
+                $('#submit-msg-box').html(response.replace(/\"/g, ""));
+                setTimeout(function () {
+                    $('#submit-modal').modal('hide');
+                    location.href='{% url 'submission_list' %}';
+                }, 1000);
+              },
+              error: function(jqXHR, exception) {
+
+                $('#submit-msg-box').html(jqXHR.responseText.replace(/\"/g, ""));
+                $(button).removeAttr("disabled");
+              }
+        });
+
+  })
+
+$('#btn-reset-problem').click(function(){
+
+    var obj = $('#submit-share label input:radio:not(:checked)');
+
+    var obj0 = $('#submit-share label #share0');
+    var obj1 = $('#submit-share label #share1');
+    obj1.parent('label').addClass('active');
+    obj0.parent('label').removeClass('active');
+
+    $("#oj-lang").val("0");
+    $('#submit-solution').val('');
+
+    $('#submit-msg-box').hide();
+  })
+
+})
+</script>
+
+

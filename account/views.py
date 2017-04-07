@@ -130,7 +130,7 @@ class UserModifyAPIView(APIView):
 
 
 def logout(request):
-    theme = request.session['theme']
+    theme = request.session['theme'] if 'theme' in request.session else 'journal'
     auth.logout(request)
     request.session['theme'] = theme
     return redirect(reverse('homepage'))

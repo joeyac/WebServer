@@ -51,7 +51,6 @@ class Problem(models.Model):
 
     hint = models.CharField(blank=True, default="", max_length=255)
 
-
     create_time = models.DateTimeField(auto_now_add=True)
     last_update_time = models.DateTimeField(auto_now=True)
 
@@ -60,13 +59,13 @@ class Problem(models.Model):
     visible = models.BooleanField(default=True)
 
     test_case_id = models.CharField(blank=True, null=True, max_length=20)
-
+    test_case_dir_hash = models.CharField(blank=True, null=True, max_length=64)
 
     remote_submission_user_number = models.IntegerField(default=-1)
     remote_accepted_user_number = models.IntegerField(default=-1)
 
     def __str__(self):
-        return self.title
+        return self.oj_name + ' ' + self.virtual_id
 
     def accepted_user_number(self):
         ac_count = Submission.objects.all().filter(problem=self, status=RESULT['accepted']).count()

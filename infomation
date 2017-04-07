@@ -1,3 +1,13 @@
+新建题目
+将标题全小写并替换且空格为下划线作为测试样例文件夹名称
+
+
+队列采用celery+rabbitMQ
+http://www.cnblogs.com/znicy/p/5626040.html
+1.sudo apt-get install rabbitmq-server
+2.sudo rabbitmq-plugins enable rabbitmq_management
+3.celery -A oj worker -l info
+
 重新确定思路
 对于需要api的地方
 使用rest_framework构建API

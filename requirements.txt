@@ -1,3 +1,5 @@
+checksumdir
+requests
 BeautifulSoup
 pygments
 django
@@ -8,4 +10,5 @@ django_summernote
 django-bootstrap3
 django-fontawesome
 django-datatable
+django-tables2
 django-ajax-selects

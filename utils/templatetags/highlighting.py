@@ -45,17 +45,18 @@ def highlight(value, single=''):
                 lexer = TextLexer
             py_string = pygments.highlight(value, lexer, HtmlFormatter())
             return py_string
-        except:
+        except Exception as e:
             return value
 
 
+# c++ c python python3 java
 @register.filter(name='code')
-def code(value):
+def code(value, lang_name):
     try:
         try:
-            lexer = guess_lexer(value)
+            lexer = get_lexer_by_name(lang_name)
         except (ValueError, pygments.util.ClassNotFound):
-            lexer = CppLexer
+            lexer = TextLexer
         py_string = pygments.highlight(value, lexer, HtmlFormatter())
         return py_string
     except:

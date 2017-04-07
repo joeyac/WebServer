@@ -26,6 +26,7 @@ urlpatterns = [
 
     url(r'', include('account.urls')),
     url(r'', include('problem.urls')),
+    url(r'', include('submission.urls')),
 
     url(r'^$', index_page, name='homepage'),
     url(r'^theme/(?P<theme_name>[\w-]+)/$', set_theme, name='set_theme'),

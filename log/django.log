@@ -1900,3 +1900,1919 @@ DoesNotExist: Problem matching query does not exist.
 2017-01-30 20:45:30,277 [Thread-96:139692066207488] [django.request:152] [base:get_response] [WARNING]- Not Found: /video/null
 2017-01-30 20:45:37,525 [Thread-101:139692043130624] [django.request:152] [base:get_response] [WARNING]- Not Found: /video/null
 2017-01-30 22:40:39,531 [Thread-27:140046585812736] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 08:11:29,465 [Thread-1:140109093021440] [django.request:152] [base:get_response] [WARNING]- Not Found: /gen204
+2017-03-07 08:27:21,111 [Thread-40:139915195049728] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 08:37:07,496 [Thread-183:139915203442432] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/6/static/img/favicon.ico
+2017-03-07 10:20:19,652 [Thread-183:139927440799488] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/-999/
+2017-03-07 10:20:19,743 [Thread-184:139927440799488] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 10:20:54,152 [Thread-187:139927431358208] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/-999/
+2017-03-07 10:21:55,067 [Thread-1:139737647421184] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/-999/
+2017-03-07 10:21:56,060 [Thread-3:139737647421184] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/-999/
+2017-03-07 10:21:56,566 [Thread-4:139737647421184] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/-999/
+2017-03-07 10:21:56,931 [Thread-5:139737647421184] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/-999/
+2017-03-07 10:22:00,294 [Thread-1:139899835512576] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/-999/
+2017-03-07 10:22:00,816 [Thread-3:139899835512576] [django.request:152] [base:get_response] [WARNING]- Not Found: /problem/-999/
+2017-03-07 10:46:54,799 [Thread-6:140556353840896] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 10:49:30,138 [Thread-3:140362183415552] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 15:48:06,114 [Thread-13:139874817058560] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 15:48:06,207 [Thread-14:139874602579712] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 16:18:56,136 [Thread-1:139824171009792] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/41/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 25, in problem_detail
+    return render(request, 'problem/problem_detail.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'submit_code' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-03-07 16:18:56,563 [Thread-3:139824171009792] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 16:19:39,800 [Thread-4:139709434730240] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submit/problems/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 479, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 399, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+2017-03-07 23:15:45,443 [Thread-12:140602980349696] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-07 23:25:00,558 [Thread-9:140564573955840] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submit/problems/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 33, in post
+    language=language)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: UNIQUE constraint failed: submission_submission.user_id
+2017-03-07 23:25:57,106 [Thread-1:139978244343552] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submit/problems/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 33, in post
+    language=language)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: UNIQUE constraint failed: submission_submission.user_id
+2017-03-07 23:40:29,171 [Thread-4:139750359893760] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submit/problems/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 33, in post
+    language=language)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: UNIQUE constraint failed: submission_submission.user_id
+2017-03-08 14:48:15,462 [Thread-5:140702693648128] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submit/problems/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 36, in post
+    sid = new_submission.id
+AttributeError: 'Submission' object has no attribute 'id'
+2017-03-08 18:12:15,301 [Thread-6:140030024537856] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 47, in submission_list
+    return render(request, 'submission/submission_list.html', {'table': table})
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 159, in render
+    values = self.sequence.resolve(context, True)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 739, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaultfilters.py", line 814, in default
+    return value or arg
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 204, in __len__
+    return len(self.data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 369, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 47, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 293, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 553, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 586, in _setup_joins
+    pieces, opts, alias)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1402, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1327, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword u'code_length' into field. Choices are: ac_info, code, create_time, info, judge_end_time, judge_start_time, language, memory, problem, problem_id, shared, status, submission_id, time, user, user_id, v_length, v_run_id, v_submit_time, v_user
+2017-03-08 18:12:15,887 [Thread-7:140030024537856] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-08 18:36:06,844 [Thread-5:140272242992896] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 46, in submission_list
+    RequestConfig(request,  paginate={'per_page': 10}).configure(table)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/config.py", line 43, in configure
+    table.order_by = order_by
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 469, in order_by
+    self.data.order_by(self._order_by)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 108, in order_by
+    self.queryset, modified = bound_column.order(self.queryset, alias[0] == '-')
+  File "/home/rhyme/code/DEV/oj-master/submission/tables.py", line 21, in order_code_length
+    len=str(F('code'))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 914, in annotate
+    clone.query.add_annotation(annotation, alias, is_summary=False)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 970, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None,
+AttributeError: 'str' object has no attribute 'resolve_expression'
+2017-03-08 18:36:53,078 [Thread-15:140369396233984] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 46, in submission_list
+    RequestConfig(request,  paginate={'per_page': 10}).configure(table)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/config.py", line 43, in configure
+    table.order_by = order_by
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 469, in order_by
+    self.data.order_by(self._order_by)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 108, in order_by
+    self.queryset, modified = bound_column.order(self.queryset, alias[0] == '-')
+  File "/home/rhyme/code/DEV/oj-master/submission/tables.py", line 21, in order_code_length
+    queryset = queryset.annotate(
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 914, in annotate
+    clone.query.add_annotation(annotation, alias, is_summary=False)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 970, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None,
+AttributeError: 'str' object has no attribute 'resolve_expression'
+2017-03-09 16:23:15,385 [Thread-1:139731886348032] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 46, in submission_list
+    RequestConfig(request,  paginate={'per_page': 10}).configure(table)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/config.py", line 43, in configure
+    table.order_by = order_by
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 469, in order_by
+    self.data.order_by(self._order_by)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 114, in order_by
+    self.queryset = self.queryset.order_by(*order_by_accessors)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 934, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1665, in add_ordering
+    raise FieldError('Invalid order_by arguments: %s' % errors)
+FieldError: Invalid order_by arguments: [u'-']
+2017-03-09 20:18:56,599 [Thread-22:140295308048128] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 48, in submission_list
+    return render(request, 'submission/submission_list.html', {'table': table})
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'tag_problem_list' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['problems/(?P<tag_id>\\d+)/$']
+2017-03-14 11:21:51,696 [Thread-15:140610141644544] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-14 14:35:51,487 [Thread-3:140206388803328] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 12:03:01,379 [Thread-10:140295962007296] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 12:03:51,133 [Thread-32:140387608545024] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 12:04:36,956 [Thread-38:140387608545024] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 12:05:56,260 [Thread-17:139991018362624] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 12:06:27,562 [Thread-27:139991018362624] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 15:23:03,935 [Thread-45:139991036458752] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 15:37:43,712 [Thread-1:140019289290496] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 70, in submission_list
+    user_name = request.user.user_name if request.user.is_authenticated() else None
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/utils/functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'user_name'
+2017-03-15 15:37:44,054 [Thread-3:140019289290496] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 15:37:47,372 [Thread-4:140019289290496] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 70, in submission_list
+    user_name = request.user.user_name if request.user.is_authenticated() else None
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/utils/functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'user_name'
+2017-03-15 20:51:00,097 [Thread-7:139906228020992] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 96, in submission_list
+    for key, value in lang_map_all:
+ValueError: too many values to unpack
+2017-03-15 20:51:00,383 [Thread-8:139906236413696] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-15 20:51:31,372 [Thread-1:139814875690752] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 101, in submission_list
+    table = SubmissionTable(submissions)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 354, in __init__
+    self.data = self.TableDataClass(data=data, table=self)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 40, in __init__
+    self.list = list(data)
+TypeError: 'NoneType' object is not iterable
+2017-03-15 21:04:10,621 [Thread-1:140616558180096] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 29, in problem_detail
+    'user': user.username,
+AttributeError: 'NoneType' object has no attribute 'username'
+2017-03-15 21:04:22,364 [Thread-8:140616541394688] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 29, in problem_detail
+    'user': user.username,
+AttributeError: 'NoneType' object has no attribute 'username'
+2017-03-15 21:04:44,632 [Thread-1:140122870961920] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 32, in problem_detail
+    return render(request, 'problem/problem_detail.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'submission_list' with arguments '()' and keyword arguments '{u'user': None}' not found. 1 pattern(s) tried: ['submissions/$']
+2017-03-15 21:05:05,104 [Thread-5:140122854176512] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 32, in problem_detail
+    return render(request, 'problem/problem_detail.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '{{' from '{{'
+2017-03-15 21:06:47,381 [Thread-18:140122862569216] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 32, in problem_detail
+    return render(request, 'problem/problem_detail.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '={{' from ''user'={{'
+2017-03-15 21:07:24,257 [Thread-23:140122870961920] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 32, in problem_detail
+    return render(request, 'problem/problem_detail.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=user' from ''user'=user'
+2017-03-15 21:07:34,033 [Thread-24:140122636941056] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 32, in problem_detail
+    return render(request, 'problem/problem_detail.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'submission_list' with arguments '()' and keyword arguments '{u'user': None}' not found. 1 pattern(s) tried: ['submissions/$']
+2017-03-15 21:08:05,726 [Thread-27:140122628548352] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 32, in problem_detail
+    return render(request, 'problem/problem_detail.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'submission_list' with arguments '(None,)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['submissions/$']
+2017-03-15 21:10:44,149 [Thread-52:140122862307072] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/1/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 20, in problem_detail
+    user_submission = Submission.objects.filter(user=user)[:5]
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 796, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 814, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1227, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1253, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1183, in build_filter
+    condition = lookup_class(lhs, value)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/lookups.py", line 19, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/fields/related_lookups.py", line 100, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 946, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'crazyX'
+2017-03-15 21:19:02,740 [Thread-1:139784604276480] [django.request:152] [base:get_response] [WARNING]- Not Found: /submissions/id=28
+2017-03-15 21:52:18,382 [Thread-4:140278717622016] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 479, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 399, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+2017-03-16 12:36:14,527 [Thread-4:140564425062144] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 79, in post
+    print request.data['ids']
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'ids'"
+2017-03-16 12:38:33,535 [Thread-7:139710369244928] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 479, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 399, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+2017-03-16 12:45:49,232 [Thread-7:140337830659840] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 479, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 399, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+2017-03-16 13:58:29,658 [Thread-1:139878953391872] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 129, in submission_list
+    return render(request, 'submission/submission_list.html', {'table': table, 'user': user_name})
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 165, in render
+    values = list(values)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 182, in items
+    yield (column, self.get_cell(column.name))
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 149, in get_cell
+    return self._call_render(bound_column, value)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 162, in _call_render
+    'table': self._table,
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/utils.py", line 503, in call_with_appropriate
+    return fn(**kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/tables.py", line 48, in render_problem
+    return format_html('<a href="{url}">{value}</a>'.format(url=url, value=value.__str__()))
+NameError: global name 'format_html' is not defined
+2017-03-16 13:58:32,199 [Thread-3:139878953391872] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 129, in submission_list
+    return render(request, 'submission/submission_list.html', {'table': table, 'user': user_name})
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 165, in render
+    values = list(values)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 182, in items
+    yield (column, self.get_cell(column.name))
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 149, in get_cell
+    return self._call_render(bound_column, value)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 162, in _call_render
+    'table': self._table,
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/utils.py", line 503, in call_with_appropriate
+    return fn(**kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/tables.py", line 48, in render_problem
+    return format_html('<a href="{url}">{value}</a>'.format(url=url, value=value.__str__()))
+NameError: global name 'format_html' is not defined
+2017-03-16 13:59:26,829 [Thread-1:140467374651136] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 129, in submission_list
+    return render(request, 'submission/submission_list.html', {'table': table, 'user': user_name})
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/defaulttags.py", line 165, in render
+    values = list(values)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 182, in items
+    yield (column, self.get_cell(column.name))
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 149, in get_cell
+    return self._call_render(bound_column, value)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/rows.py", line 162, in _call_render
+    'table': self._table,
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/utils.py", line 503, in call_with_appropriate
+    return fn(**kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/tables.py", line 48, in render_problem
+    return format_html('<a href="{url}">{value}</a>'.format(url=url, value=value.__str__()))
+NameError: global name 'format_html' is not defined
+2017-03-16 20:07:54,979 [Thread-6785:139984472012544] [django.request:152] [base:get_response] [WARNING]- Not Found: /gen204
+2017-04-04 16:36:12,176 [Thread-79:140503244846848] [django.request:152] [base:get_response] [WARNING]- Not Found: /ad
+2017-04-04 16:36:12,330 [Thread-80:140503278417664] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-06 15:31:17,434 [Thread-11:140576521426688] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-06 15:45:09,704 [Thread-33:140216237020928] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-06 15:45:17,728 [Thread-38:140216245413632] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /problem/101/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/problem/views.py", line 27, in problem_detail
+    'origin_url': oj_problem_url[problem.oj_name].format(vid=problem.virtual_id),
+KeyError: u'USTBOJ'
+2017-04-06 16:53:48,506 [Thread-170:139981617182464] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-06 16:54:07,854 [Thread-222:139981608789760] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 16:54:08,865 [Thread-224:139981617182464] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 16:54:09,855 [Thread-225:139981617182464] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 16:54:10,295 [Thread-226:139981617182464] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 19:57:17,883 [Thread-156:140524593526528] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 19:57:18,884 [Thread-157:140524593526528] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 19:57:19,885 [Thread-158:140524593526528] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 19:57:20,886 [Thread-159:140524593526528] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 19:57:22,852 [Thread-160:140524593526528] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 19:57:23,704 [Thread-161:140524613981952] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 19:57:23,883 [Thread-162:140524613981952] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:07,674 [Thread-53:139798384920320] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:08,670 [Thread-56:139798165583616] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:09,669 [Thread-57:139798165583616] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:10,670 [Thread-58:139798165583616] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:11,854 [Thread-59:139798165583616] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:12,854 [Thread-60:139798165583616] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:13,668 [Thread-61:139798165583616] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:14,667 [Thread-62:139798148798208] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:15,668 [Thread-63:139798148798208] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:16,669 [Thread-64:139798148798208] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:17,670 [Thread-66:139798165583616] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 20:04:18,668 [Thread-67:139798165583616] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/get/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 87, in post
+    submission = Submission.objects.get(submission_id=id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 23:21:58,671 [Thread-1:140376490092288] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submissions/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 135, in submission_list
+    return render(request, 'submission/submission_list.html', {'table': table, 'user': user_name})
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 99: 'submission_id', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+2017-04-06 23:25:14,980 [Thread-6:140376490092288] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/71/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 142, in submission_detail
+    table = SubmissionTable(submission)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 354, in __init__
+    self.data = self.TableDataClass(data=data, table=self)
+  File "/usr/local/lib/python2.7/dist-packages/django_tables2/tables.py", line 45, in __init__
+    ' list(data) -- {} has neither'.format(type(data).__name__)
+ValueError: data must be QuerySet-like (have count() and order_by()) or support list(data) -- Submission has neither
+2017-04-06 23:25:45,753 [Thread-1:140014169331456] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/71/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 145, in submission_detail
+    visible = True if user and (submission.user == user or submission.shared) else False
+AttributeError: 'QuerySet' object has no attribute 'user'
+2017-04-06 23:44:50,655 [Thread-22:140114325120768] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/10/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 144, in submission_detail
+    submission = Submission.objects.get(submission_id=submission_id)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Submission matching query does not exist.
+2017-04-06 23:52:30,274 [Thread-1:140371543193344] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/38/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 162, in submission_detail
+    return render(request, 'submission/submission_list.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid filter: 'lang_name'
+2017-04-07 00:04:04,821 [Thread-44:140036639422208] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/71/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 164, in submission_detail
+    return render(request, 'submission/submission_list.html', data)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '['data']' from 'compile_info['data']'
+2017-04-07 00:11:55,453 [Thread-35:140278119786240] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/67/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 163, in submission_detail
+    test_case_info = json.loads(submission.info, strict=False)
+  File "/usr/lib/python2.7/json/__init__.py", line 352, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-04-07 00:12:05,332 [Thread-36:140278207674112] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/58/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 157, in submission_detail
+    compile_info = json.loads(submission.info, strict=False)
+  File "/usr/lib/python2.7/json/__init__.py", line 352, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-04-07 00:13:45,482 [Thread-34:140164015752960] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/49/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 163, in submission_detail
+    test_case_info = json.loads(submission.info, strict=False)
+  File "/usr/lib/python2.7/json/__init__.py", line 352, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-04-07 00:13:54,423 [Thread-35:140164015752960] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /submission/49/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/submission/views.py", line 163, in submission_detail
+    test_case_info = json.loads(submission.info, strict=False)
+  File "/usr/lib/python2.7/json/__init__.py", line 352, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-04-07 14:17:29,955 [Thread-9:140644672001792] [django.request:152] [base:get_response] [WARNING]- Not Found: /submissions/discuss.php
+2017-04-07 14:17:30,050 [Thread-10:140644672001792] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-07 15:36:06,306 [Thread-16:139913588037376] [django.request:152] [base:get_response] [WARNING]- Not Found: /gen204
+2017-04-07 15:47:01,206 [Thread-146:139913572304640] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-04-07 16:16:52,139 [Thread-54:139747129276160] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/account/views.py", line 133, in logout
+    theme = request.session['theme']
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 57, in __getitem__
+    return self._session[key]
+KeyError: 'theme'
+2017-04-07 16:17:00,100 [Thread-55:139747129276160] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/account/views.py", line 133, in logout
+    theme = request.session['theme']
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 57, in __getitem__
+    return self._session[key]
+KeyError: 'theme'
+2017-04-07 16:18:39,273 [Thread-1:140509904512768] [django.request:124] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rhyme/code/DEV/oj-master/account/views.py", line 133, in logout
+    theme = request.session['theme'] or 'journal'
+  File "/home/rhyme/.local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 57, in __getitem__
+    return self._session[key]
+KeyError: 'theme'

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from problem.models import Problem
+from submission.models import Submission
 
 from table.columns import Column, DatetimeColumn, LinkColumn, Link
 from table.tables import Table, TableDataMap
@@ -21,14 +22,27 @@ class FlagColumn(Column):
 
     def render(self, obj):
         if self.user:
-            import random
-            flag = random.randint(0, 2)
+            submissions = Submission.objects.filter(user=self.user, problem=obj)
+            flag = 0  # None
+            submit_cnt = 0
+            submit_ac_cnt = 0
+            if submissions:
+                flag = 1
+                submit_cnt = submissions.count()
+                submissions = submissions.filter(status='accepted')
+                if submissions:
+                    submit_ac_cnt = submissions.count()
+                    flag = 2
             if flag == 0:
                 return ''
-            elif flag == 1:
-                return format_html('&nbsp&nbsp<i class="fa fa-check" aria-hidden="true"></i>')
+            elif flag == 2:
+                info = 'Submit with {cnt} attempts, {ac_cnt} accepted.'.format(cnt=submit_cnt, ac_cnt=submit_ac_cnt)
+                return format_html('&nbsp&nbsp<i class="fa fa-check" aria-hidden="true" '
+                                   'data-toggle="tooltip" title="{info}" ></i>'.format(info=info))
             else:
-                return format_html('&nbsp&nbsp<i class="fa fa-times" aria-hidden="true"></i>')
+                info = 'Submit with {cnt} attempts.'.format(cnt=submit_cnt)
+                return format_html('&nbsp&nbsp<i class="fa fa-times" aria-hidden="true" '
+                                   'data-toggle="tooltip" title="{info}" ></i>'.format(info=info))
         return ''
 
 
@@ -36,7 +50,7 @@ class PidColumn(Column):
     def render(self, obj):
         pid = A(self.field).resolve(obj)
         pid = int(pid)
-        return pid + 1000
+        return pid + 999
 
 
 class ProblemTable(Table):
@@ -60,7 +74,6 @@ class ProblemTable(Table):
     source = Column(field='source', header=u'Source')
     create_time = DatetimeColumn(field='create_time', header=u'Create Time', header_attrs={'width': '20%'})
 
-
     class Meta:
         model = Problem
         attrs = {'class': 'table-hover table-striped table-condensed'}
@@ -70,3 +83,15 @@ class ProblemTable(Table):
         pagination = True
         ajax = True
         ajax_source = reverse_lazy('table_data_problem')
+
+
+class LocalProblemTable(ProblemTable):
+    class Meta:
+        model = Problem
+        attrs = {'class': 'table-hover table-striped table-condensed'}
+        search = True
+        search_placeholder = 'search'
+        page_length = 15
+        pagination = True
+        ajax = True
+        ajax_source = reverse_lazy('local_table_data_problem')
