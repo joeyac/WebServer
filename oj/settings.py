@@ -294,7 +294,7 @@ SERVER_TOKEN = 'server_token'
 
 # queue
 # CELERY SETTINGS
-CELERY_BROKER_URL = 'amqp://xjw:x970307jw@localhost/oj'
+CELERY_BROKER_URL = 'amqp://xjw:password@localhost/oj'
 CELERY_RESULT_BACKEND = 'rpc://'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
