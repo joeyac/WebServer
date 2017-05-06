@@ -13,10 +13,11 @@ from rest_framework.permissions import IsAuthenticated
 from submission.serializers import SubmitCodeSerializer, UpdateStatusSerializer, IDSerializer
 from submission.models import Submission
 from submission.tasks import p_judge
+from submission.forms import QueryForm
 
 from problem.models import Problem
 
-from submission.tables import SubmissionTable
+from submission.tables import SubmissionTable, OrderSubmissionTable
 from django_tables2 import RequestConfig
 
 from judger.models import Judger
@@ -39,6 +40,11 @@ class SubmitCodeAPIView(APIView):
         user = request.user if request.user.is_authenticated() else None
         if not user:
             return Response('you should login first!', status=status.HTTP_401_UNAUTHORIZED)
+        check, second = user.profile.consume()
+        if not check:
+            info = 'You have submitted too fast.Please submit after about {time} second(s).'.format(time=second)
+            return Response(info, status=status.HTTP_400_BAD_REQUEST)
+
         if serializer.is_valid():
             data = serializer.data
             problem = Problem.objects.get(problem_id=data['problem_id'])
@@ -99,40 +105,89 @@ class SubmissionInfo(APIView):
             return Response(result, status=status.HTTP_200_OK)
 
 
+# TODO 1. option orderable
+# TODO 2. add language string in submission
+# TODO 3. add html filter
+# def submission_list(request):
+#     user_name = request.user.username if request.user.is_authenticated() else None
+#     submissions = Submission.objects.all()
+#
+#     run_id = request.GET.get('id')
+#     submissions = submissions.filter(submission_id__lte=run_id) if run_id else submissions
+#
+#     user = request.GET.get('user')
+#     submissions = submissions.filter(user__username=user) if user else submissions
+#     print user
+#
+#     oj = request.GET.get('oj')
+#     submissions = submissions.filter(problem__oj_name__iexact=oj) if oj else submissions
+#
+#     virtual_id = request.GET.get('vid')
+#     submissions = submissions.filter(problem__virtual_id=virtual_id) if virtual_id else submissions
+#
+#     result = request.GET.get('status')
+#     result = str(result).lower()
+#     if result == 'all':
+#         pass
+#     elif result in result_default_list:
+#         submissions = submissions.filter(status__icontains=result) if result else submissions
+#
+#     lang = request.GET.get('lang')
+#     if lang and lang in front_lang['ALL']:
+#         temp_submissions = {}
+#         for key in lang_map_all:
+#             new_submissions = submissions.filter(problem__oj_name__iexact=key, language__in=lang_map_all[key][lang])
+#             temp_submissions = chain(temp_submissions, new_submissions)
+#         submissions = temp_submissions
+#
+#     table = OrderSubmissionTable(submissions)
+#     RequestConfig(request,  paginate={'per_page': 15}).configure(table)
+#     data = {
+#         'table': table,
+#         'user': user_name,
+#
+#     }
+#     return render(request, 'submission/submission_list.html', data)
+
 def submission_list(request):
     user_name = request.user.username if request.user.is_authenticated() else None
+    form = None
     submissions = Submission.objects.all()
+    if request.method == 'POST':
+        print request
+        form = QueryForm(request.POST)
+        if form.is_valid():
+            query_username = form.cleaned_data['username']
+            submissions = submissions.filter(user__username__iexact=query_username) if query_username else submissions
 
-    run_id = request.GET.get('id')
-    submissions = submissions.filter(submission_id__lte=run_id) if run_id else submissions
+            pid = form.cleaned_data['pid']
+            submissions = submissions.filter(problem__problem_id=pid) if pid else submissions
 
-    user = request.GET.get('user')
-    submissions = submissions.filter(user__username=user) if user else submissions
+            result = form.cleaned_data['result']
+            submissions = submissions.filter(status__icontains=result) if result else submissions
 
-    oj = request.GET.get('oj')
-    submissions = submissions.filter(problem__oj_name__iexact=oj) if oj else submissions
+            lang = form.cleaned_data['lang']
+            if lang:
+                temp_submissions = {}
+                for key in lang_map_all:
+                    new_submissions = submissions.filter(problem__oj_name__iexact=key,
+                                                         language__in=lang_map_all[key][lang])
+                    temp_submissions = chain(temp_submissions, new_submissions)
+                submissions = temp_submissions
 
-    virtual_id = request.GET.get('vid')
-    submissions = submissions.filter(problem__virtual_id=virtual_id) if virtual_id else submissions
+            form = QueryForm(form.clean())
 
-    result = request.GET.get('status')
-    result = str(result).lower()
-    if result == 'all':
-        pass
-    elif result in result_default_list:
-        submissions = submissions.filter(status__icontains=result) if result else submissions
+    if not form:
+        form = QueryForm()
 
-    lang = request.GET.get('lang')
-    if lang and lang in front_lang['ALL']:
-        temp_submissions = {}
-        for key in lang_map_all:
-            new_submissions = submissions.filter(problem__oj_name__iexact=key, language__in=lang_map_all[key][lang])
-            temp_submissions = chain(temp_submissions, new_submissions)
-        submissions = temp_submissions
-
-    table = SubmissionTable(submissions)
-    RequestConfig(request,  paginate={'per_page': 15}).configure(table)
-    return render(request, 'submission/submission_list.html', {'table': table, 'user': user_name})
+    table = OrderSubmissionTable(submissions)
+    RequestConfig(request, paginate={'per_page': 15}).configure(table)
+    data = {
+        'table': table,
+        'user': user_name,
+        'form': form,
+    }
+    return render(request, 'submission/new_submission_list.html', data)
 
 
 # TODO

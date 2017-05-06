@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load highlighting %}
+{% block title %}USTBOJ{% endblock %}
+{% block body %}
+<div class="container" style="margin-top:100px; ">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <img src="{% static 'img/timg.jpg' %}">
+        </div>
+        <div class="col-md-6">
+            {{ info|safe }}
+            You've made a mistake, or my code has error, who knows?
+            <h1 style="font-size:80px;">{{ id }}</h1>
+            <br>
+            你或许可以考虑发邮件告诉我为啥会看到这幅图？<br>
+            给我发邮件:<a href="Mailto:xu_jingwei@outlook.com">xu_jingwei@outlook.com </a>
+            <br><br>
+            <a style="opacity: 1;" class="link" href="#" onclick="history.go(-1)">Back?</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+{% block js_block %}
+
+
+{% endblock %}

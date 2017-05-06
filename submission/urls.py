@@ -7,6 +7,7 @@ urlpatterns = [
 
     url(r'^submit/problems/$', SubmitCodeAPIView.as_view(), name='submit_code'),
     url(r'^submissions/$', submission_list, name='submission_list'),
+
     url(r'^submission/(?P<submission_id>\d+)/$', submission_detail, name='submission_detail'),
 
     url(r'^submissions/get/$', SubmissionInfo.as_view(), name='get_submissions'),

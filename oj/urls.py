@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from .views import index_page, set_theme, TimeAPIView
+from .views import index_page, set_theme, TimeAPIView, acm_team
+from .views import page_error, page_not_found, permission_denied
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,9 +33,19 @@ urlpatterns = [
     url(r'^theme/(?P<theme_name>[\w-]+)/$', set_theme, name='set_theme'),
     url(r'^time/$', TimeAPIView.as_view(), name='server_time'),
 
-]
+    url(r'^acm_team/$', acm_team, name='acm_team'),
 
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += url(r'^no_page/$', permission_denied, name='no_page'),
+    favicon_view = RedirectView.as_view(url='/static/img/favicon.ico', permanent=True)
+    urlpatterns += [
+        url(r'^favicon\.ico$', favicon_view),
+    ]
+else:
+    handler403 = permission_denied
+    handler404 = page_not_found
+    handler500 = page_error

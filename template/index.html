@@ -14,10 +14,10 @@
     </div>
     <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-6 col-sm-4">
-            <h3>VJudge Status</h3>
-            By checking remote status page every 10 minutes.
-            <table class='table table-hover table-striped table-condensed' width='100%'>
+        <div class="col-md-4">
+
+                <h3>VJudge Status</h3>
+                    <table class='table table-hover table-striped table-condensed' width='100%'>
                 <thead>
                     <tr>
                         <th width='70%'>OJ</th>
@@ -53,28 +53,49 @@
                     </tr>
                 </tbody>
             </table>
+
+            <br>
+
+                <h3>Latest News
+                    <span style="font-size:12px">
+                        <a href="#">[more...]</a>
+                    </span>
+                </h3>
+                    <h4>Hello World!</h4>
+                    <p>Here's where we'll put our latest news!<a name="1" class="link" href="#">[...]</a></p>
+
+            <br>
+                <h3>Todo list</h3>
+                    <ol>
+                        <li>build the front web page</li>
+                        <li>User problem submission contest</li>
+                        <li>Virtual Judge on many OJs</li>
+                        <li>Rank list</li>
+                        <li>Discuss</li>
+                        <li>Something else whatever with full of inspiration</li>
+                    </ol>
+
         </div>
-        <div class="col-xs-6 col-sm-4">
-            <h3>Latest News
-                <span style="font-size:12px">
-                    <a href="#">[more...]</a>
-                </span>
-            </h3>
-            <h4>Hello World!</h4>
-            <p>Here's where we'll put our latest news!<a name="1" class="link" href="#">[...]</a></p>
+        <div class="col-md-8">
+            <h3>代码高亮预览(For Problem A + B )</h3>
+            <h4>c:</h4>
+            {{c_code|code:'c'|safe}}
+            <h4>c++:</h4>
+            {{cpp_code|code:'c++'|safe}}
+            <h4>java:</h4>
+            {{java_code|code:'java'|safe}}
+            <h4>python2:</h4>
+            {{py2_code|code:'python'|safe}}
+            <h4>python3:</h4>
+            {{py3_code|code:'python3'|safe}}
         </div>
-        <div class="col-xs-6 col-sm-4">
-            <h3>Todo list</h3>
-                <ol>
-                    <li>build the front web page</li>
-                    <li>User problem submission contest</li>
-                    <li>Virtual Judge on many OJs</li>
-                    <li>Rank list</li>
-                    <li>Discuss</li>
-                    <li></li>
-                </ol>
+
         </div>
-        {{code|highlight|safe}}
+
+
+
+
+
     </div>
     </div>
 </div>

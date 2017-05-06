@@ -51,6 +51,11 @@ class UserRegisterAPIView(APIView):
             if 'school' in data:
                 profile.school = data['school']
                 profile.save(update_fields=['school'])
+
+            if 'major' in data:
+                profile.major = data['major']
+                profile.save(update_fields=['major'])
+
             return Response('success!', status=status.HTTP_200_OK)
         else:
             key, value = serializer.errors.popitem()
@@ -115,13 +120,20 @@ class UserModifyAPIView(APIView):
                 user.email = data['email']
                 user.save(update_fields=['email'])
 
-            if user.profile.nickname != data['nickname']:
-                user.profile.nickname = data['nickname']
+            nick_name = data.get('nickname') or ''
+            school = data.get('school') or ''
+            major = data.get('major') or ''
+            if user.profile.nickname != nick_name:
+                user.profile.nickname = nick_name
                 user.profile.save(update_fields=['nickname'])
 
-            if user.profile.school != data['school']:
-                user.profile.school = data['school']
+            if user.profile.school != school:
+                user.profile.school = school
                 user.profile.save(update_fields=['school'])
+
+            if user.profile.major != major:
+                user.profile.major = major
+                user.profile.save(update_fields=['major'])
             return Response('success!', status=status.HTTP_200_OK)
         else:
             key, value = serializer.errors.popitem()

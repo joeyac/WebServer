@@ -13,7 +13,51 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-lg-12">
+            <br>
+            <form id="filterform" class="form-inline" action="{% url 'submission_list' %}" method="get">
 
+                <label>Username: <input type="text" name="user" id="showname" placeholder="Username"  class="form-control"></label>
+                <label>Problem ID: <input type="text" name="showpid" id="showpid" placeholder="Problem ID" class="form-control" ></label>
+                <label>Result:
+                <select name="showres" id="showres" class="form-control">
+                  <option value="">All</option>
+                  <option value="Accepted">Accepted</option>
+                  <option value="Wrong Answer">Wrong Answer</option>
+                  <option value="Runtime Error">Runtime Error</option>
+                  <option value="Time Limit Exceed">Time Limit Exceed</option>
+                  <option value="Memory Limit Exceed">Memory Limit Exceed</option>
+                  <option value="Output Limit Exceed">Output Limit Exceed</option>
+                  <option value="Presentation Error">Presentation Error</option>
+                  <option value="Compile Error">Compile Error</option>
+                  <option value="Restricted Function">Restricted Function</option>
+                  <option value="Waiting">Waiting</option>
+                  <option value="Judge Error">Judge Error</option>
+                </select>
+              </label>
+
+                <label>Language:
+                <select name="showlang" id="showlang" class="form-control">
+                  <option value="">All</option>
+                  <option value="1">GNU C++</option>
+                  <option value="2">GNU C</option>
+                  <option value="3">Oracle Java</option>
+                  <option value="4">Free Pascal</option>
+                  <option value="5">Python2</option>
+                  <option value="16">Python3</option>
+                  <option value="6">C# (Mono)</option>
+                  <option value="7">Fortran</option>
+                  <option value="8">Perl</option>
+                  <option value="9">Ruby</option>
+                  <option value="10">Ada</option>
+                  <option value="11">SML</option>
+                  <option value="12">Visual C++</option>
+                  <option value="13">Visual C</option>
+                </select>
+              </label>
+                &nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-primary">Show</button>
+            </form>
+            <br>
 
             <div class="table-container">
                 {% block table %}

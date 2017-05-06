@@ -25,7 +25,7 @@ class Profile(models.Model):
     school = models.CharField(max_length=200, blank=True, null=True)
     # date_joined DataTimeField
     # last_login DataTimeField
-
+    major = models.CharField(max_length=200, blank=True, null=True)
     # real profile
     # problems_status = JSONField(default={}) instead of Query
     # accepted_problem_number = models.IntegerField(default=0)
@@ -40,21 +40,21 @@ class Profile(models.Model):
             self.token = TOKEN_BUCKET_DEFAULT_CAPACITY
             self.token -= token
             self.save(update_fields=['submit_timestamp', 'token'])
-            return True
+            return True, ''
         else:
             now = timezone.now()
-            buff = TOKEN_BUCKET_FILL_RATE * (now - self.submit_timestamp).total_seconds() / 60
-            self.token = min( self.token + int(buff), TOKEN_BUCKET_DEFAULT_CAPACITY )
+            expected_second = (now - self.submit_timestamp).total_seconds()
+            expected_minute = long(expected_second / 60)
+            buff = TOKEN_BUCKET_FILL_RATE * expected_minute
+            self.token = min(self.token + long(buff), TOKEN_BUCKET_DEFAULT_CAPACITY)
 
             if self.token >= token:
                 self.token -= token
                 self.submit_timestamp = now
                 self.save(update_fields=['submit_timestamp', 'token'])
-                return True
+                return True, ''
 
-            return False
-
-
+            return False, int(60-expected_second) + 1
 
     def __str__(self):
         return self.nickname

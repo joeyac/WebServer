@@ -74,12 +74,23 @@
                             </div>
                         </dd>
 
+                        {% if problem.hint %}
+                        <dt>Hint</dt>
+                        <dd>
+                            <div class="well well-sm"  style="font-family:Courier New,Courier,monospace;">
+                            {% autoescape off %}
+                                {{problem.hint}}
+                            {% endautoescape %}
+                            </div>
+                        </dd>
+                        {% endif %}
+
                 </div>
 
             </div>
             <div class="col-md-3 col-lg-3 container" id="right-panel">
                 <div id="operation">
-                    <div class="col-sm-6 col-lg-6">
+                    <div class="col-sm-6 col-lg-6" style="margin-left: -5px;margin-top: 10px;">
                         <a href="#" class="btn btn-primary" id="btn-submit"
                                 data-toggle="modal" data-target="#submit-modal">
                             <i class="fa fa-upload"></i>
@@ -87,14 +98,47 @@
                         </a>
                     </div>
 
-                    <div class="col-sm-6 col-lg-6">
+                    <div class="col-sm-6 col-lg-6" style="margin-top: 10px;">
+                        <!--<a href="{% url 'submission_list' %}{% if user %}?user={{ user }}{% endif %}" class="btn btn-default" id="btn-submissions">-->
+                            <!--Submissions-->
+                        <!--</a>-->
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Submissions
+                              <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
 
-                        <a href="{% url 'submission_list' %}{% if user %}?user={{ user }}{% endif %}" class="btn btn-default" id="btn-submissions">
-                            Submissions
-                        </a>
+                            <li><a href="{% url 'submission_list' %}?vid={{ problem.virtual_id }}">Submissions of All</a></li>
+
+                            {% if user %}
+                                <li><a href="{% url 'submission_list' %}?user={{ user }}&vid={{ problem.virtual_id }}">Submissions of Mine</a></li>
+                            {% endif %}
+
+                        </ul>
                     </div>
 
-                    <div class="col-sm-12 col-lg-12 well well-sm" id="conditions" style="margin-top: 30px;margin-left: 5px;">
+                    <!--<div class="container-fluid" style="margin-top: 15px;;margin-left: 5px;">-->
+                        <!--<div class="btn-group  btn-group-justified" role="group" aria-label="...">-->
+                            <!--<a href="#" class="btn btn-primary" id="btn-submit"-->
+                                    <!--data-toggle="modal" data-target="#submit-modal">-->
+                                <!--<i class="fa fa-upload"></i>-->
+                                <!--Submit-->
+                            <!--</a>-->
+
+                          <!--<div class="btn-group" role="group">-->
+                            <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                              <!--Submissions-->
+                              <!--<span class="caret"></span>-->
+                            <!--</button>-->
+                            <!--<ul class="dropdown-menu">-->
+                              <!--<li><a href="#">Submissions of All</a></li>-->
+                              <!--<li><a href="#">Submissions of Mine</a></li>-->
+                            <!--</ul>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <div class="col-sm-12 col-lg-12 well well-sm" id="conditions" style="margin-top: 20px;margin-left: 5px;">
                         <dl class="card row" style="margin-bottom: 10px;">
 
                             <dt class="col-sm-5">Time limit</dt>

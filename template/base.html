@@ -95,31 +95,18 @@
 
                     <li id="status"><a href="{% url 'submission_list' %}">Status</a></li>
 
-                    <li class="dropdown" id="contest">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contest <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li id="repcontest"><a href="#">Replay Contests</a></li>
-                            <li id="vcontest"><a href="#">Virtual Contests</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">contest format</li>
-                            <li id="stdcontest"><a href="#">Standard Contests</a></li>
-                            <li id="icpccontest"><a href="#">Contests (ICPC format)</a></li>
-                            <li id="cfcontest"><a href="#">Contests (CF format)</a></li>
-                        </ul>
-                    </li>
 
                     <li id="ranklist"><a href="#">Ranklist</a></li>
 
                     <li class="dropdown" id="more">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More... <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li id="discuss"><a href="#">Discuss</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Our Team</a></li>
+                            <li><a href="{% url 'homepage' %}">News</a></li>
+                            <li><a href="{% url 'acm_team' %}">ACM Team</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Recent Contests</a></li>
-                            <li class="divider"></li>
-                            <li class="disabled"><a>Coming Soon...</a></li>
+                            <li class="disabled"><a>Following Coming Soon...</a></li>
+                            <li class="disabled"><a>Discuss</a></li>
+                            <li class="disabled"><a>Notebook</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -134,8 +121,8 @@
                             <li class="dropdown" id="user-space">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ request.user.username }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Show My Information</a></li>
-                                    <li><a href="#" data-toggle="modal" data-target="#modify-modal">Modify My Information</a></li>
+                                    <!--<li><a href="#">Show My Information</a></li>-->
+                                    <li><a href="#" data-toggle="modal" data-target="#modify-modal">My Information</a></li>
                                 {% if request.user.is_staff %}
                                     <li><a href="#">Administration</a></li>
                                 {% endif %}
@@ -161,7 +148,7 @@
             alert("Only can input number!");
             $("#problem_id").val("");
         }else{
-            problem_id = problem_id - 999;
+            problem_id = problem_id;
             if(problem_id<1){
                 alert("problem id rejected.");
                 $("#problem_id").val("");
@@ -297,7 +284,7 @@ getServerTime();
                             </a>
                         </li>
                     </ul>
-                    <p class="text-center text-muted">Copyright &copy; USTBOJ 2016</p>
+                    <p class="text-center text-muted">Copyright &copy; USTBOJ 2017</p>
                     <p class="text-center text-muted"> Powered by&nbsp;<a href="http://jingwei.site/" target="__bank"     >CrazyX</a></p>
                 </div>
             </div>

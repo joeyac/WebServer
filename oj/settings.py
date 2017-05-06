@@ -24,7 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9k3k39zpr_iisybgp8m(q0*5q-d$zccd53!q(b^j4jo+!f)4+n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+if not DEBUG:
+    CSRF_COOKIE_SECURE = True
+    CSRF_COOKIE_HTTPONLY = True
+    X_FRAME_OPTIONS = 'DENY'
 
 ALLOWED_HOSTS = ['*']
 
@@ -146,9 +151,12 @@ STATIC_URL = '/static/'
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
+
 PROJECT_ROOT = os.path.normpath(os.path.dirname('oj'))
 
-STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, "static/"), )
+# STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, "static/"), )
 
 MEDIA_URL = '/media/'
 
@@ -283,10 +291,12 @@ BOOTSTRAP3 = {
 
 
 # limit user submit
-TOKEN_BUCKET_DEFAULT_CAPACITY = 2
+# TOKEN_BUCKET_DEFAULT_CAPACITY = 2
+TOKEN_BUCKET_DEFAULT_CAPACITY = 10
 
 # unit: minute
-TOKEN_BUCKET_FILL_RATE = 1
+# TOKEN_BUCKET_FILL_RATE = 1
+TOKEN_BUCKET_FILL_RATE = 6
 
 # token for update status
 SERVER_TOKEN = 'server_token'

@@ -36,7 +36,8 @@ class SubmissionTable(tables.Table):
             'width':"100%",
             'role': 'grid',
         }
-        fields = ('submission_id', 'user', 'problem', 'status', 'time', 'memory', 'language', 'code_length', 'create_time')
+        fields = ('submission_id', 'user', 'problem', 'status', 'time',
+                  'memory', 'language', 'code_length', 'create_time')
 
     def render_status(self, value, record):
         html = get_status_html(value)
@@ -69,3 +70,30 @@ class SubmissionTable(tables.Table):
             id=F('submission_id')
         ).order_by('-id')
         return queryset, True
+
+
+class OrderSubmissionTable(SubmissionTable):
+    pid = tables.Column(orderable=False, accessor='problem', verbose_name='Pid')
+
+    def render_pid(self, value):
+        return value.problem_id
+
+    user = tables.Column(orderable=False)
+    problem = tables.Column(orderable=False)
+    status = tables.Column(orderable=False)
+
+    class Meta:
+        model = Submission
+        orderable = True
+        order_by = '-submission_id'
+        attrs = {
+            'class': "table table-hover table-striped table-bordered table-responsive no-footer",
+            # ='class': "table table-hover table-striped basetable cf dataTable",
+            'width':"100%",
+            'role': 'grid',
+        }
+        fields = ('submission_id', 'user', 'pid', 'problem', 'status', 'time',
+                  'memory', 'language', 'code_length', 'create_time')
+
+
+

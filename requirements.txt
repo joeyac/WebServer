@@ -1,8 +1,8 @@
+django==1.10.4
 checksumdir
 requests
 BeautifulSoup
 pygments
-django
 djangorestframework
 markdown
 django-filter
@@ -12,3 +12,4 @@ django-fontawesome
 django-datatable
 django-tables2
 django-ajax-selects
+gunicorn

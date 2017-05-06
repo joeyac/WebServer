@@ -16,6 +16,7 @@ class UserRegisterSerializer(serializers.Serializer):
     email = serializers.EmailField(max_length=254)
     nickname = serializers.CharField(max_length=30, required=False)
     school = serializers.CharField(max_length=200, required=False)
+    major = serializers.CharField(max_length=200, required=False)
 
 
 class UserLoginSerializer(serializers.Serializer):
@@ -30,3 +31,4 @@ class UserModifySerializer(serializers.Serializer):
     nickname = serializers.CharField(max_length=30, required=False)
     school = serializers.CharField(max_length=200, required=False)
     email = serializers.EmailField(max_length=254)
+    major = serializers.CharField(max_length=200, required=False)

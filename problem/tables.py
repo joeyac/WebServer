@@ -49,8 +49,8 @@ class FlagColumn(Column):
 class PidColumn(Column):
     def render(self, obj):
         pid = A(self.field).resolve(obj)
-        pid = int(pid)
-        return pid + 999
+        pid = str(pid)
+        return pid.zfill(4)
 
 
 class ProblemTable(Table):

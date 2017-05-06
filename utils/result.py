@@ -69,6 +69,8 @@ highlight_map = {
     'g++14': 'c++',
 }
 
+lang_all = ['c', 'c++', 'java', 'pascal', 'python', 'c#', 'other']
+
 lang_map_all = {
     'USTBOJ': {'c': [0, ],
                'c++': [1, ],

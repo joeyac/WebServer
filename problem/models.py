@@ -49,7 +49,7 @@ class Problem(models.Model):
     input_sample = models.TextField(max_length=10000, default="")
     output_sample = models.TextField(max_length=10000, default="")
 
-    hint = models.CharField(blank=True, default="", max_length=255)
+    hint = models.TextField(blank=True, default="", max_length=10000)
 
     create_time = models.DateTimeField(auto_now_add=True)
     last_update_time = models.DateTimeField(auto_now=True)

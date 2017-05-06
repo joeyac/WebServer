@@ -10,6 +10,7 @@ from table.views import FeedDataView
 
 from django.shortcuts import render
 from django.db.models import Q, Count
+from django.shortcuts import get_object_or_404
 
 from functools import reduce
 
@@ -17,7 +18,8 @@ from functools import reduce
 # TODO show user submission of certain problem
 def problem_detail(request, problem_id):
     user = request.user if request.user.is_authenticated() else None
-    problem = Problem.objects.get(problem_id=problem_id, visible=True)
+    # problem = Problem.objects.get(problem_id=problem_id, visible=True)
+    problem = get_object_or_404(Problem, problem_id=problem_id, visible=True)
     user_submission = Submission.objects.filter(user=user)[:5]
     if not user_submission.exists():
         user_submission = None

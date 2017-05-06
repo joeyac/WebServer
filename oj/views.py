@@ -18,34 +18,84 @@ def set_theme(request, theme_name):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
-def index_page(request):
-    code = """
-// 测试代码高亮
-#include <stdio.h>
-int main(int argc,char *args[])//主函数
-{
-    FILE * f_in=fopen(args[1],"r");//测试输入
-    FILE * f_out=fopen(args[2],"r");//测试输出
-    FILE * f_user=fopen(args[3],"r");//用户输出
-    int ret=0;//返回值
-    int T,n,a,b;
-    fscanf(f_in,"%d",&T);//从输入中读取数据组数T
-    while(T--)
-    {
-        fscanf(f_in,"%d",&n);
-        fscanf(f_user,"%d%d",&a,&b);
-        if(a+b!=n)
-            ret = 1;//Wrong Answer
-    }
-    fclose(f_in);
-    fclose(f_out);
-    fclose(f_user);
-    return ret;
-}
+def acm_team(request):
+    return render(request, "team.html")
 
+
+def page_not_found(request):
+    error_id = '404'
+    error_info = '好像找不到你要的页面啊<br>哥们你是不是点错了<br>'
+    return render(request, "404.html", {'id': error_id, 'info': error_info})
+
+
+def page_error(request):
+    error_id = '500'
+    error_info = '完蛋服务器内部出了点问题<br>哥们干得漂亮！<br>'
+    return render(request, "500.html", {'id': error_id, 'info': error_info})
+
+
+def permission_denied(request):
+    error_id = '403'
+    error_info = '这个页面拒绝了你的访问<br>╮(╯▽╰)╭<br>'
+    return render(request, "403.html", {'id': error_id, 'info': error_info})
+
+
+def index_page(request):
+    c_code = """
+#include <stdio.h>
+int a,b;
+int main() {
+    while (scanf("%d%d",&a,&b)!=EOF) {
+        printf("%d\\n",a+b);
+    }
+    return 0;
+}
 """
-    value = u"C\u8bed\u8a00\u7a0b\u5e8f\u8bbe\u8ba1\u7ec3\u4e60\uff08\u56db\uff09"
-    return render(request,"index.html",{'code': code,'value':value})
+    cpp_code = """
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    while(cin>>a>>b){
+        cout<<a+b<<endl;
+    }
+    return 0;
+}
+"""
+    java_code = """
+import java.util.*;
+import java.io.*;
+public class Main{
+    static public void main(String[] args) throws IOException {
+        Scanner cin =new Scanner(System.in);
+        while(cin.hasNext()) {
+            int a = cin.nextInt();
+            int b = cin.nextInt();
+            System.out.println(a + b);
+        }
+    }
+}
+"""
+    py2_code = """
+while True:
+    try:
+        a, b = map(int, raw_input().strip().split())
+        print a + b
+    except EOFError:
+        break
+"""
+    py3_code = """
+while True:
+    try:
+        a, b = map(int, input().strip().split())
+        print (a + b)
+    except EOFError:
+        break
+"""
+    return render(request,"index.html",{'c_code': c_code,'cpp_code': cpp_code,
+                                        'java_code': java_code,'py2_code': py2_code,
+                                        'py3_code': py3_code, })
 
 
 class TimeAPIView(APIView):
