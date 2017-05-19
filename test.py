@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 from __future__ import print_function
 from oj.wsgi import *
 from utils.get_oj_problem import import_hdu_problem
 
 
 # import_hdu_problem(1099)
-for i in range(1000,1100):
+for i in range(2000,2100):
     import_hdu_problem(i)
 
 Theme = (

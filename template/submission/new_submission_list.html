@@ -14,11 +14,12 @@
     <div class="row">
         <div class="col-md-12 col-lg-12">
             <br>
+	    {% if not submission %}
             <div align="right">
 
                 <form id="filter_form" action="{% url 'submission_list' %}" class="form form-inline" method="post">
                     {% csrf_token %}
-                    {% bootstrap_form form bound_css_class='' form_group_class='form-group gap_class' label_class='gap_label' %}
+                    {% bootstrap_form form layout='inline' bound_css_class='' %}
                     {% buttons %}
                         <button type="submit" class="btn btn-primary">
                             {% bootstrap_icon "filter" %} Shows
@@ -26,7 +27,7 @@
                     {% endbuttons %}
                 </form>
             </div>
-
+	    {% endif %}
             <br>
 
             <div class="table-container">
@@ -165,11 +166,11 @@
     span.ce {color: #6633FF;}
     .gap_class{
         padding-left:0px;
-        padding-right:25px;
+        padding-right:0px;
     }
     .gap_label{
         padding-left:0px;
-        padding-right:10px;
+        padding-right:0px;
     }
 </style>
 

@@ -23,7 +23,7 @@ def get_hdu_info(problem_id):
         return False
 
     soup = BeautifulSoup(html, 'html5lib')
-    title = soup.find('h1').string
+    title = soup.find('h1').text
 
     limit_text = soup.find('span').get_text()
     limit = re.findall(r"\d+\.?\d*", limit_text)
@@ -101,23 +101,28 @@ def import_hdu_problem(problem_id):
 
     _input_sample = ''
     _output_sample = ''
+    for item in res:
+        if type(res[item]) == unicode:
+            res[item] = res[item].encode('utf-8')
+
     if len(res['input_sample']) == 1:
-        _input_sample = str(res['input_sample'][0])
+        _input_sample = res['input_sample'][0]
     else:
         cnt = 0
         for ins in res['input_sample']:
             cnt += 1
-            _input_sample += "样例 " + str(cnt) + " : <br>"
-            _input_sample += str(ins)
+            _input_sample += "样例 " + cnt + " : <br>"
+            _input_sample += ins
 
     if len(res['output_sample']) == 1:
-        _output_sample = str(res['output_sample'][0])
+        _output_sample = res['output_sample'][0]
     else:
         cnt = 0
         for ous in res['output_sample']:
             cnt += 1
-            _output_sample += "样例 " + str(cnt) + " : <br>"
-            _output_sample += str(ous)
+            _output_sample += "样例 " + cnt + " : <br>"
+            _output_sample += ous
+
 
     Problem.objects.update_or_create(
         oj_name=oj_name,
@@ -139,3 +144,4 @@ def import_hdu_problem(problem_id):
     )
     print(oj_name + str(problem_id) + " : success!")
     return True
+

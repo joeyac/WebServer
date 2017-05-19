@@ -1,0 +1,2490 @@
+[2017-05-07 19:52:41 +0000] [3204] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f605ebd7398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f605ebd70c8>
+  pre_fork: <function pre_fork at 0x7f605ebd7230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f605ec4aed8>
+  pre_exec: <function pre_exec at 0x7f605ebd7938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f605ebdb1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f605ebd7aa0>
+  post_request: <function post_request at 0x7f605ebd7b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f605ebd7668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f605ec4ad70>
+  post_worker_init: <function post_worker_init at 0x7f605ebd7500>
+  child_exit: <function child_exit at 0x7f605ebd7cf8>
+  worker_exit: <function worker_exit at 0x7f605ebd7e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f605ebd77d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f605ebdb050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-07 19:52:41 +0000] [3204] [INFO] Starting gunicorn 19.7.1
+[2017-05-07 19:52:41 +0000] [3204] [DEBUG] Arbiter booted
+[2017-05-07 19:52:41 +0000] [3204] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (3204)
+[2017-05-07 19:52:41 +0000] [3204] [INFO] Using worker: sync
+[2017-05-07 19:52:41 +0000] [3217] [INFO] Booting worker with pid: 3217
+[2017-05-07 19:52:41 +0000] [3220] [INFO] Booting worker with pid: 3220
+[2017-05-07 19:52:41 +0000] [3221] [INFO] Booting worker with pid: 3221
+[2017-05-07 19:52:42 +0000] [3226] [INFO] Booting worker with pid: 3226
+[2017-05-07 19:52:42 +0000] [3204] [DEBUG] 4 workers
+[2017-05-07 20:36:41 +0000] [3204] [INFO] Handling signal: term
+[2017-05-07 20:36:41 +0000] [3204] [INFO] Shutting down: Master
+[2017-05-07 20:36:41 +0000] [7366] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f6ce5d66398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f6ce5d660c8>
+  pre_fork: <function pre_fork at 0x7f6ce5d66230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f6ce5dd9ed8>
+  pre_exec: <function pre_exec at 0x7f6ce5d66938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f6ce5d6a1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f6ce5d66aa0>
+  post_request: <function post_request at 0x7f6ce5d66b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f6ce5d66668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f6ce5dd9d70>
+  post_worker_init: <function post_worker_init at 0x7f6ce5d66500>
+  child_exit: <function child_exit at 0x7f6ce5d66cf8>
+  worker_exit: <function worker_exit at 0x7f6ce5d66e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f6ce5d667d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f6ce5d6a050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-07 20:36:41 +0000] [7366] [INFO] Starting gunicorn 19.7.1
+[2017-05-07 20:36:41 +0000] [7366] [DEBUG] Arbiter booted
+[2017-05-07 20:36:41 +0000] [7366] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (7366)
+[2017-05-07 20:36:41 +0000] [7366] [INFO] Using worker: sync
+[2017-05-07 20:36:41 +0000] [7375] [INFO] Booting worker with pid: 7375
+[2017-05-07 20:36:41 +0000] [7378] [INFO] Booting worker with pid: 7378
+[2017-05-07 20:36:41 +0000] [7379] [INFO] Booting worker with pid: 7379
+[2017-05-07 20:36:41 +0000] [7384] [INFO] Booting worker with pid: 7384
+[2017-05-07 20:36:41 +0000] [7366] [DEBUG] 4 workers
+[2017-05-07 20:47:18 +0000] [7366] [INFO] Handling signal: term
+[2017-05-07 20:47:18 +0000] [7366] [INFO] Shutting down: Master
+[2017-05-07 20:47:18 +0000] [8262] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f8723b64398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f8723b640c8>
+  pre_fork: <function pre_fork at 0x7f8723b64230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f8723bd7ed8>
+  pre_exec: <function pre_exec at 0x7f8723b64938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f8723b681b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f8723b64aa0>
+  post_request: <function post_request at 0x7f8723b64b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f8723b64668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f8723bd7d70>
+  post_worker_init: <function post_worker_init at 0x7f8723b64500>
+  child_exit: <function child_exit at 0x7f8723b64cf8>
+  worker_exit: <function worker_exit at 0x7f8723b64e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f8723b647d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f8723b68050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-07 20:47:18 +0000] [8262] [INFO] Starting gunicorn 19.7.1
+[2017-05-07 20:47:18 +0000] [8262] [DEBUG] Arbiter booted
+[2017-05-07 20:47:18 +0000] [8262] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (8262)
+[2017-05-07 20:47:18 +0000] [8262] [INFO] Using worker: sync
+[2017-05-07 20:47:18 +0000] [8269] [INFO] Booting worker with pid: 8269
+[2017-05-07 20:47:18 +0000] [8272] [INFO] Booting worker with pid: 8272
+[2017-05-07 20:47:18 +0000] [8273] [INFO] Booting worker with pid: 8273
+[2017-05-07 20:47:18 +0000] [8275] [INFO] Booting worker with pid: 8275
+[2017-05-07 20:47:18 +0000] [8262] [DEBUG] 4 workers
+[2017-05-07 20:52:30 +0000] [8262] [INFO] Handling signal: term
+[2017-05-07 20:52:30 +0000] [8262] [INFO] Shutting down: Master
+[2017-05-07 20:52:30 +0000] [8767] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f882419a398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f882419a0c8>
+  pre_fork: <function pre_fork at 0x7f882419a230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f882420ded8>
+  pre_exec: <function pre_exec at 0x7f882419a938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f882419e1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f882419aaa0>
+  post_request: <function post_request at 0x7f882419ab90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f882419a668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f882420dd70>
+  post_worker_init: <function post_worker_init at 0x7f882419a500>
+  child_exit: <function child_exit at 0x7f882419acf8>
+  worker_exit: <function worker_exit at 0x7f882419ae60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f882419a7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f882419e050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-07 20:52:30 +0000] [8767] [INFO] Starting gunicorn 19.7.1
+[2017-05-07 20:52:30 +0000] [8767] [DEBUG] Arbiter booted
+[2017-05-07 20:52:30 +0000] [8767] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (8767)
+[2017-05-07 20:52:30 +0000] [8767] [INFO] Using worker: sync
+[2017-05-07 20:52:30 +0000] [8774] [INFO] Booting worker with pid: 8774
+[2017-05-07 20:52:30 +0000] [8775] [INFO] Booting worker with pid: 8775
+[2017-05-07 20:52:31 +0000] [8780] [INFO] Booting worker with pid: 8780
+[2017-05-07 20:52:31 +0000] [8782] [INFO] Booting worker with pid: 8782
+[2017-05-07 20:52:31 +0000] [8767] [DEBUG] 4 workers
+[2017-05-07 21:00:23 +0000] [8767] [INFO] Handling signal: term
+[2017-05-07 21:00:23 +0000] [8767] [INFO] Shutting down: Master
+[2017-05-07 21:00:23 +0000] [9454] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f9375eaa398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f9375eaa0c8>
+  pre_fork: <function pre_fork at 0x7f9375eaa230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f9375f1ded8>
+  pre_exec: <function pre_exec at 0x7f9375eaa938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f9375eae1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f9375eaaaa0>
+  post_request: <function post_request at 0x7f9375eaab90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f9375eaa668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f9375f1dd70>
+  post_worker_init: <function post_worker_init at 0x7f9375eaa500>
+  child_exit: <function child_exit at 0x7f9375eaacf8>
+  worker_exit: <function worker_exit at 0x7f9375eaae60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f9375eaa7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f9375eae050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-07 21:00:23 +0000] [9454] [INFO] Starting gunicorn 19.7.1
+[2017-05-07 21:00:23 +0000] [9454] [DEBUG] Arbiter booted
+[2017-05-07 21:00:23 +0000] [9454] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (9454)
+[2017-05-07 21:00:23 +0000] [9454] [INFO] Using worker: sync
+[2017-05-07 21:00:23 +0000] [9461] [INFO] Booting worker with pid: 9461
+[2017-05-07 21:00:23 +0000] [9464] [INFO] Booting worker with pid: 9464
+[2017-05-07 21:00:23 +0000] [9467] [INFO] Booting worker with pid: 9467
+[2017-05-07 21:00:23 +0000] [9470] [INFO] Booting worker with pid: 9470
+[2017-05-07 21:00:23 +0000] [9454] [DEBUG] 4 workers
+[2017-05-07 21:56:12 +0000] [9454] [INFO] Handling signal: term
+[2017-05-07 21:56:12 +0000] [9454] [INFO] Shutting down: Master
+[2017-05-07 21:56:12 +0000] [14535] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fa1c6989398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fa1c69890c8>
+  pre_fork: <function pre_fork at 0x7fa1c6989230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fa1c69fced8>
+  pre_exec: <function pre_exec at 0x7fa1c6989938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7fa1c698d1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fa1c6989aa0>
+  post_request: <function post_request at 0x7fa1c6989b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fa1c6989668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7fa1c69fcd70>
+  post_worker_init: <function post_worker_init at 0x7fa1c6989500>
+  child_exit: <function child_exit at 0x7fa1c6989cf8>
+  worker_exit: <function worker_exit at 0x7fa1c6989e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7fa1c69897d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fa1c698d050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-07 21:56:12 +0000] [14535] [INFO] Starting gunicorn 19.7.1
+[2017-05-07 21:56:12 +0000] [14535] [DEBUG] Arbiter booted
+[2017-05-07 21:56:12 +0000] [14535] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (14535)
+[2017-05-07 21:56:12 +0000] [14535] [INFO] Using worker: sync
+[2017-05-07 21:56:12 +0000] [14542] [INFO] Booting worker with pid: 14542
+[2017-05-07 21:56:12 +0000] [14545] [INFO] Booting worker with pid: 14545
+[2017-05-07 21:56:12 +0000] [14548] [INFO] Booting worker with pid: 14548
+[2017-05-07 21:56:12 +0000] [14549] [INFO] Booting worker with pid: 14549
+[2017-05-07 21:56:12 +0000] [14535] [DEBUG] 4 workers
+[2017-05-07 22:00:09 +0000] [14535] [INFO] Handling signal: term
+[2017-05-07 22:00:09 +0000] [14535] [INFO] Shutting down: Master
+[2017-05-07 22:00:09 +0000] [14891] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f8b5c772398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f8b5c7720c8>
+  pre_fork: <function pre_fork at 0x7f8b5c772230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f8b5c7e5ed8>
+  pre_exec: <function pre_exec at 0x7f8b5c772938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f8b5c7761b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f8b5c772aa0>
+  post_request: <function post_request at 0x7f8b5c772b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f8b5c772668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f8b5c7e5d70>
+  post_worker_init: <function post_worker_init at 0x7f8b5c772500>
+  child_exit: <function child_exit at 0x7f8b5c772cf8>
+  worker_exit: <function worker_exit at 0x7f8b5c772e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f8b5c7727d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f8b5c776050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-07 22:00:09 +0000] [14891] [INFO] Starting gunicorn 19.7.1
+[2017-05-07 22:00:09 +0000] [14891] [DEBUG] Arbiter booted
+[2017-05-07 22:00:09 +0000] [14891] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (14891)
+[2017-05-07 22:00:09 +0000] [14891] [INFO] Using worker: sync
+[2017-05-07 22:00:09 +0000] [14898] [INFO] Booting worker with pid: 14898
+[2017-05-07 22:00:09 +0000] [14901] [INFO] Booting worker with pid: 14901
+[2017-05-07 22:00:09 +0000] [14904] [INFO] Booting worker with pid: 14904
+[2017-05-07 22:00:09 +0000] [14905] [INFO] Booting worker with pid: 14905
+[2017-05-07 22:00:09 +0000] [14891] [DEBUG] 4 workers
+[2017-05-07 22:10:09 +0000] [14891] [INFO] Handling signal: term
+[2017-05-07 22:10:09 +0000] [14891] [INFO] Shutting down: Master
+[2017-05-07 22:10:09 +0000] [15831] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f1a8796d398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f1a8796d0c8>
+  pre_fork: <function pre_fork at 0x7f1a8796d230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f1a879e0ed8>
+  pre_exec: <function pre_exec at 0x7f1a8796d938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f1a879711b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f1a8796daa0>
+  post_request: <function post_request at 0x7f1a8796db90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f1a8796d668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f1a879e0d70>
+  post_worker_init: <function post_worker_init at 0x7f1a8796d500>
+  child_exit: <function child_exit at 0x7f1a8796dcf8>
+  worker_exit: <function worker_exit at 0x7f1a8796de60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f1a8796d7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f1a87971050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-07 22:10:09 +0000] [15831] [INFO] Starting gunicorn 19.7.1
+[2017-05-07 22:10:09 +0000] [15831] [DEBUG] Arbiter booted
+[2017-05-07 22:10:09 +0000] [15831] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (15831)
+[2017-05-07 22:10:09 +0000] [15831] [INFO] Using worker: sync
+[2017-05-07 22:10:09 +0000] [15838] [INFO] Booting worker with pid: 15838
+[2017-05-07 22:10:09 +0000] [15841] [INFO] Booting worker with pid: 15841
+[2017-05-07 22:10:09 +0000] [15844] [INFO] Booting worker with pid: 15844
+[2017-05-07 22:10:09 +0000] [15845] [INFO] Booting worker with pid: 15845
+[2017-05-07 22:10:09 +0000] [15831] [DEBUG] 4 workers
+[2017-05-18 10:58:06 +0000] [15831] [INFO] Handling signal: term
+[2017-05-18 10:58:06 +0000] [15831] [INFO] Shutting down: Master
+[2017-05-18 10:58:06 +0000] [22149] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f23ef39c398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f23ef39c0c8>
+  pre_fork: <function pre_fork at 0x7f23ef39c230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f23ef40fed8>
+  pre_exec: <function pre_exec at 0x7f23ef39c938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f23ef3a01b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f23ef39caa0>
+  post_request: <function post_request at 0x7f23ef39cb90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f23ef39c668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f23ef40fd70>
+  post_worker_init: <function post_worker_init at 0x7f23ef39c500>
+  child_exit: <function child_exit at 0x7f23ef39ccf8>
+  worker_exit: <function worker_exit at 0x7f23ef39ce60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f23ef39c7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f23ef3a0050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 10:58:06 +0000] [22149] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 10:58:06 +0000] [22149] [DEBUG] Arbiter booted
+[2017-05-18 10:58:06 +0000] [22149] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (22149)
+[2017-05-18 10:58:06 +0000] [22149] [INFO] Using worker: sync
+[2017-05-18 10:58:06 +0000] [22156] [INFO] Booting worker with pid: 22156
+[2017-05-18 10:58:06 +0000] [22157] [INFO] Booting worker with pid: 22157
+[2017-05-18 10:58:06 +0000] [22158] [INFO] Booting worker with pid: 22158
+[2017-05-18 10:58:06 +0000] [22159] [INFO] Booting worker with pid: 22159
+[2017-05-18 10:58:06 +0000] [22149] [DEBUG] 4 workers
+[2017-05-18 10:59:55 +0000] [22149] [INFO] Handling signal: term
+[2017-05-18 10:59:55 +0000] [22149] [INFO] Shutting down: Master
+[2017-05-18 10:59:55 +0000] [22322] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f087f89f398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f087f89f0c8>
+  pre_fork: <function pre_fork at 0x7f087f89f230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f087f912ed8>
+  pre_exec: <function pre_exec at 0x7f087f89f938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f087f8a31b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f087f89faa0>
+  post_request: <function post_request at 0x7f087f89fb90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f087f89f668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f087f912d70>
+  post_worker_init: <function post_worker_init at 0x7f087f89f500>
+  child_exit: <function child_exit at 0x7f087f89fcf8>
+  worker_exit: <function worker_exit at 0x7f087f89fe60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f087f89f7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f087f8a3050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 10:59:55 +0000] [22322] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 10:59:55 +0000] [22322] [DEBUG] Arbiter booted
+[2017-05-18 10:59:55 +0000] [22322] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (22322)
+[2017-05-18 10:59:55 +0000] [22322] [INFO] Using worker: sync
+[2017-05-18 10:59:55 +0000] [22329] [INFO] Booting worker with pid: 22329
+[2017-05-18 10:59:55 +0000] [22330] [INFO] Booting worker with pid: 22330
+[2017-05-18 10:59:55 +0000] [22335] [INFO] Booting worker with pid: 22335
+[2017-05-18 10:59:56 +0000] [22336] [INFO] Booting worker with pid: 22336
+[2017-05-18 10:59:56 +0000] [22322] [DEBUG] 4 workers
+[2017-05-18 13:47:00 +0000] [22322] [INFO] Handling signal: term
+[2017-05-18 13:47:00 +0000] [22322] [INFO] Shutting down: Master
+[2017-05-18 13:47:00 +0000] [3160] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f9491e82398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f9491e820c8>
+  pre_fork: <function pre_fork at 0x7f9491e82230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f9491ef5ed8>
+  pre_exec: <function pre_exec at 0x7f9491e82938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f9491e861b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f9491e82aa0>
+  post_request: <function post_request at 0x7f9491e82b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f9491e82668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f9491ef5d70>
+  post_worker_init: <function post_worker_init at 0x7f9491e82500>
+  child_exit: <function child_exit at 0x7f9491e82cf8>
+  worker_exit: <function worker_exit at 0x7f9491e82e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f9491e827d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f9491e86050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 13:47:00 +0000] [3160] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 13:47:00 +0000] [3160] [DEBUG] Arbiter booted
+[2017-05-18 13:47:00 +0000] [3160] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (3160)
+[2017-05-18 13:47:00 +0000] [3160] [INFO] Using worker: sync
+[2017-05-18 13:47:00 +0000] [3167] [INFO] Booting worker with pid: 3167
+[2017-05-18 13:47:00 +0000] [3168] [INFO] Booting worker with pid: 3168
+[2017-05-18 13:47:00 +0000] [3171] [INFO] Booting worker with pid: 3171
+[2017-05-18 13:47:00 +0000] [3176] [INFO] Booting worker with pid: 3176
+[2017-05-18 13:47:00 +0000] [3160] [DEBUG] 4 workers
+[2017-05-18 13:51:08 +0000] [3160] [INFO] Handling signal: term
+[2017-05-18 13:51:08 +0000] [3160] [INFO] Shutting down: Master
+[2017-05-18 13:51:08 +0000] [3564] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f74a8048398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f74a80480c8>
+  pre_fork: <function pre_fork at 0x7f74a8048230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f74a80bbed8>
+  pre_exec: <function pre_exec at 0x7f74a8048938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f74a804c1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f74a8048aa0>
+  post_request: <function post_request at 0x7f74a8048b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f74a8048668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f74a80bbd70>
+  post_worker_init: <function post_worker_init at 0x7f74a8048500>
+  child_exit: <function child_exit at 0x7f74a8048cf8>
+  worker_exit: <function worker_exit at 0x7f74a8048e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f74a80487d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f74a804c050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 13:51:08 +0000] [3564] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 13:51:08 +0000] [3564] [DEBUG] Arbiter booted
+[2017-05-18 13:51:08 +0000] [3564] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (3564)
+[2017-05-18 13:51:08 +0000] [3564] [INFO] Using worker: sync
+[2017-05-18 13:51:08 +0000] [3571] [INFO] Booting worker with pid: 3571
+[2017-05-18 13:51:08 +0000] [3574] [INFO] Booting worker with pid: 3574
+[2017-05-18 13:51:08 +0000] [3577] [INFO] Booting worker with pid: 3577
+[2017-05-18 13:51:08 +0000] [3580] [INFO] Booting worker with pid: 3580
+[2017-05-18 13:51:08 +0000] [3564] [DEBUG] 4 workers
+[2017-05-18 13:52:15 +0000] [3564] [INFO] Handling signal: term
+[2017-05-18 13:52:15 +0000] [3564] [INFO] Shutting down: Master
+[2017-05-18 13:52:15 +0000] [3664] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f62068a9398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f62068a90c8>
+  pre_fork: <function pre_fork at 0x7f62068a9230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f620691ced8>
+  pre_exec: <function pre_exec at 0x7f62068a9938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f62068ad1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f62068a9aa0>
+  post_request: <function post_request at 0x7f62068a9b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f62068a9668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f620691cd70>
+  post_worker_init: <function post_worker_init at 0x7f62068a9500>
+  child_exit: <function child_exit at 0x7f62068a9cf8>
+  worker_exit: <function worker_exit at 0x7f62068a9e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f62068a97d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f62068ad050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 13:52:15 +0000] [3664] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 13:52:15 +0000] [3664] [DEBUG] Arbiter booted
+[2017-05-18 13:52:15 +0000] [3664] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (3664)
+[2017-05-18 13:52:15 +0000] [3664] [INFO] Using worker: sync
+[2017-05-18 13:52:15 +0000] [3671] [INFO] Booting worker with pid: 3671
+[2017-05-18 13:52:15 +0000] [3674] [INFO] Booting worker with pid: 3674
+[2017-05-18 13:52:15 +0000] [3675] [INFO] Booting worker with pid: 3675
+[2017-05-18 13:52:15 +0000] [3678] [INFO] Booting worker with pid: 3678
+[2017-05-18 13:52:15 +0000] [3664] [DEBUG] 4 workers
+[2017-05-18 13:52:59 +0000] [3664] [INFO] Handling signal: term
+[2017-05-18 13:52:59 +0000] [3664] [INFO] Shutting down: Master
+[2017-05-18 13:52:59 +0000] [3705] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7ff57e175398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7ff57e1750c8>
+  pre_fork: <function pre_fork at 0x7ff57e175230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7ff57e1e8ed8>
+  pre_exec: <function pre_exec at 0x7ff57e175938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7ff57e1791b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7ff57e175aa0>
+  post_request: <function post_request at 0x7ff57e175b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7ff57e175668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7ff57e1e8d70>
+  post_worker_init: <function post_worker_init at 0x7ff57e175500>
+  child_exit: <function child_exit at 0x7ff57e175cf8>
+  worker_exit: <function worker_exit at 0x7ff57e175e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7ff57e1757d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7ff57e179050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 13:52:59 +0000] [3705] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 13:52:59 +0000] [3705] [DEBUG] Arbiter booted
+[2017-05-18 13:52:59 +0000] [3705] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (3705)
+[2017-05-18 13:52:59 +0000] [3705] [INFO] Using worker: sync
+[2017-05-18 13:52:59 +0000] [3712] [INFO] Booting worker with pid: 3712
+[2017-05-18 13:52:59 +0000] [3715] [INFO] Booting worker with pid: 3715
+[2017-05-18 13:52:59 +0000] [3718] [INFO] Booting worker with pid: 3718
+[2017-05-18 13:52:59 +0000] [3719] [INFO] Booting worker with pid: 3719
+[2017-05-18 13:52:59 +0000] [3705] [DEBUG] 4 workers
+[2017-05-18 13:53:48 +0000] [3705] [INFO] Handling signal: term
+[2017-05-18 13:53:48 +0000] [3705] [INFO] Shutting down: Master
+[2017-05-18 13:53:49 +0000] [3795] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f34358e7398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f34358e70c8>
+  pre_fork: <function pre_fork at 0x7f34358e7230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f343595aed8>
+  pre_exec: <function pre_exec at 0x7f34358e7938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f34358eb1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f34358e7aa0>
+  post_request: <function post_request at 0x7f34358e7b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f34358e7668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f343595ad70>
+  post_worker_init: <function post_worker_init at 0x7f34358e7500>
+  child_exit: <function child_exit at 0x7f34358e7cf8>
+  worker_exit: <function worker_exit at 0x7f34358e7e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f34358e77d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f34358eb050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 13:53:49 +0000] [3795] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 13:53:49 +0000] [3795] [DEBUG] Arbiter booted
+[2017-05-18 13:53:49 +0000] [3795] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (3795)
+[2017-05-18 13:53:49 +0000] [3795] [INFO] Using worker: sync
+[2017-05-18 13:53:49 +0000] [3802] [INFO] Booting worker with pid: 3802
+[2017-05-18 13:53:49 +0000] [3803] [INFO] Booting worker with pid: 3803
+[2017-05-18 13:53:49 +0000] [3808] [INFO] Booting worker with pid: 3808
+[2017-05-18 13:53:49 +0000] [3809] [INFO] Booting worker with pid: 3809
+[2017-05-18 13:53:49 +0000] [3795] [DEBUG] 4 workers
+[2017-05-18 13:57:22 +0000] [3795] [INFO] Handling signal: term
+[2017-05-18 13:57:22 +0000] [3795] [INFO] Shutting down: Master
+[2017-05-18 13:57:22 +0000] [4172] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f3129abd398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f3129abd0c8>
+  pre_fork: <function pre_fork at 0x7f3129abd230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f3129b30ed8>
+  pre_exec: <function pre_exec at 0x7f3129abd938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f3129ac11b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f3129abdaa0>
+  post_request: <function post_request at 0x7f3129abdb90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f3129abd668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f3129b30d70>
+  post_worker_init: <function post_worker_init at 0x7f3129abd500>
+  child_exit: <function child_exit at 0x7f3129abdcf8>
+  worker_exit: <function worker_exit at 0x7f3129abde60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f3129abd7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f3129ac1050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 13:57:22 +0000] [4172] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 13:57:22 +0000] [4172] [DEBUG] Arbiter booted
+[2017-05-18 13:57:22 +0000] [4172] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (4172)
+[2017-05-18 13:57:22 +0000] [4172] [INFO] Using worker: sync
+[2017-05-18 13:57:22 +0000] [4179] [INFO] Booting worker with pid: 4179
+[2017-05-18 13:57:22 +0000] [4182] [INFO] Booting worker with pid: 4182
+[2017-05-18 13:57:22 +0000] [4183] [INFO] Booting worker with pid: 4183
+[2017-05-18 13:57:22 +0000] [4172] [DEBUG] 4 workers
+[2017-05-18 13:57:22 +0000] [4186] [INFO] Booting worker with pid: 4186
+[2017-05-18 13:58:02 +0000] [4172] [INFO] Handling signal: term
+[2017-05-18 13:58:02 +0000] [4172] [INFO] Shutting down: Master
+[2017-05-18 13:58:02 +0000] [4247] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7ff78c25f398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7ff78c25f0c8>
+  pre_fork: <function pre_fork at 0x7ff78c25f230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7ff78c2d2ed8>
+  pre_exec: <function pre_exec at 0x7ff78c25f938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7ff78c2631b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7ff78c25faa0>
+  post_request: <function post_request at 0x7ff78c25fb90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7ff78c25f668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7ff78c2d2d70>
+  post_worker_init: <function post_worker_init at 0x7ff78c25f500>
+  child_exit: <function child_exit at 0x7ff78c25fcf8>
+  worker_exit: <function worker_exit at 0x7ff78c25fe60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7ff78c25f7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7ff78c263050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 13:58:02 +0000] [4247] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 13:58:02 +0000] [4247] [DEBUG] Arbiter booted
+[2017-05-18 13:58:02 +0000] [4247] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (4247)
+[2017-05-18 13:58:02 +0000] [4247] [INFO] Using worker: sync
+[2017-05-18 13:58:02 +0000] [4254] [INFO] Booting worker with pid: 4254
+[2017-05-18 13:58:02 +0000] [4257] [INFO] Booting worker with pid: 4257
+[2017-05-18 13:58:02 +0000] [4258] [INFO] Booting worker with pid: 4258
+[2017-05-18 13:58:02 +0000] [4259] [INFO] Booting worker with pid: 4259
+[2017-05-18 13:58:02 +0000] [4247] [DEBUG] 4 workers
+[2017-05-18 14:04:00 +0000] [4247] [INFO] Handling signal: term
+[2017-05-18 14:04:00 +0000] [4247] [INFO] Shutting down: Master
+[2017-05-18 14:04:00 +0000] [4707] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fb3a1969398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fb3a19690c8>
+  pre_fork: <function pre_fork at 0x7fb3a1969230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7fb3a19dced8>
+  pre_exec: <function pre_exec at 0x7fb3a1969938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7fb3a196d1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fb3a1969aa0>
+  post_request: <function post_request at 0x7fb3a1969b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fb3a1969668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7fb3a19dcd70>
+  post_worker_init: <function post_worker_init at 0x7fb3a1969500>
+  child_exit: <function child_exit at 0x7fb3a1969cf8>
+  worker_exit: <function worker_exit at 0x7fb3a1969e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7fb3a19697d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7fb3a196d050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:04:00 +0000] [4707] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:04:00 +0000] [4707] [DEBUG] Arbiter booted
+[2017-05-18 14:04:00 +0000] [4707] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (4707)
+[2017-05-18 14:04:00 +0000] [4707] [INFO] Using worker: sync
+[2017-05-18 14:04:00 +0000] [4714] [INFO] Booting worker with pid: 4714
+[2017-05-18 14:04:00 +0000] [4717] [INFO] Booting worker with pid: 4717
+[2017-05-18 14:04:00 +0000] [4718] [INFO] Booting worker with pid: 4718
+[2017-05-18 14:04:00 +0000] [4707] [DEBUG] 4 workers
+[2017-05-18 14:04:00 +0000] [4723] [INFO] Booting worker with pid: 4723
+[2017-05-18 14:10:49 +0000] [4707] [INFO] Handling signal: term
+[2017-05-18 14:10:49 +0000] [4707] [INFO] Shutting down: Master
+[2017-05-18 14:10:49 +0000] [5273] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f4f3b5a8398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f4f3b5a80c8>
+  pre_fork: <function pre_fork at 0x7f4f3b5a8230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f4f3b61bed8>
+  pre_exec: <function pre_exec at 0x7f4f3b5a8938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f4f3b5ac1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f4f3b5a8aa0>
+  post_request: <function post_request at 0x7f4f3b5a8b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f4f3b5a8668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f4f3b61bd70>
+  post_worker_init: <function post_worker_init at 0x7f4f3b5a8500>
+  child_exit: <function child_exit at 0x7f4f3b5a8cf8>
+  worker_exit: <function worker_exit at 0x7f4f3b5a8e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f4f3b5a87d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f4f3b5ac050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:10:49 +0000] [5273] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:10:49 +0000] [5273] [DEBUG] Arbiter booted
+[2017-05-18 14:10:49 +0000] [5273] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (5273)
+[2017-05-18 14:10:49 +0000] [5273] [INFO] Using worker: sync
+[2017-05-18 14:10:49 +0000] [5289] [INFO] Booting worker with pid: 5289
+[2017-05-18 14:10:49 +0000] [5292] [INFO] Booting worker with pid: 5292
+[2017-05-18 14:10:49 +0000] [5295] [INFO] Booting worker with pid: 5295
+[2017-05-18 14:10:49 +0000] [5298] [INFO] Booting worker with pid: 5298
+[2017-05-18 14:10:49 +0000] [5273] [DEBUG] 4 workers
+[2017-05-18 14:14:13 +0000] [5273] [INFO] Handling signal: term
+[2017-05-18 14:14:13 +0000] [5273] [INFO] Shutting down: Master
+[2017-05-18 14:14:13 +0000] [5601] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f43ee44a398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f43ee44a0c8>
+  pre_fork: <function pre_fork at 0x7f43ee44a230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f43ee4bded8>
+  pre_exec: <function pre_exec at 0x7f43ee44a938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f43ee44e1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f43ee44aaa0>
+  post_request: <function post_request at 0x7f43ee44ab90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f43ee44a668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f43ee4bdd70>
+  post_worker_init: <function post_worker_init at 0x7f43ee44a500>
+  child_exit: <function child_exit at 0x7f43ee44acf8>
+  worker_exit: <function worker_exit at 0x7f43ee44ae60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f43ee44a7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f43ee44e050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:14:13 +0000] [5601] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:14:13 +0000] [5601] [DEBUG] Arbiter booted
+[2017-05-18 14:14:13 +0000] [5601] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (5601)
+[2017-05-18 14:14:13 +0000] [5601] [INFO] Using worker: sync
+[2017-05-18 14:14:13 +0000] [5608] [INFO] Booting worker with pid: 5608
+[2017-05-18 14:14:14 +0000] [5611] [INFO] Booting worker with pid: 5611
+[2017-05-18 14:14:14 +0000] [5614] [INFO] Booting worker with pid: 5614
+[2017-05-18 14:14:14 +0000] [5615] [INFO] Booting worker with pid: 5615
+[2017-05-18 14:14:14 +0000] [5601] [DEBUG] 4 workers
+[2017-05-18 14:15:13 +0000] [5601] [INFO] Handling signal: term
+[2017-05-18 14:15:13 +0000] [5601] [INFO] Shutting down: Master
+[2017-05-18 14:15:13 +0000] [5701] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f13b4f67398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f13b4f670c8>
+  pre_fork: <function pre_fork at 0x7f13b4f67230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f13b4fdaed8>
+  pre_exec: <function pre_exec at 0x7f13b4f67938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f13b4f6b1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f13b4f67aa0>
+  post_request: <function post_request at 0x7f13b4f67b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f13b4f67668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f13b4fdad70>
+  post_worker_init: <function post_worker_init at 0x7f13b4f67500>
+  child_exit: <function child_exit at 0x7f13b4f67cf8>
+  worker_exit: <function worker_exit at 0x7f13b4f67e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f13b4f677d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f13b4f6b050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:15:13 +0000] [5701] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:15:13 +0000] [5701] [DEBUG] Arbiter booted
+[2017-05-18 14:15:13 +0000] [5701] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (5701)
+[2017-05-18 14:15:13 +0000] [5701] [INFO] Using worker: sync
+[2017-05-18 14:15:13 +0000] [5708] [INFO] Booting worker with pid: 5708
+[2017-05-18 14:15:13 +0000] [5711] [INFO] Booting worker with pid: 5711
+[2017-05-18 14:15:13 +0000] [5714] [INFO] Booting worker with pid: 5714
+[2017-05-18 14:15:13 +0000] [5717] [INFO] Booting worker with pid: 5717
+[2017-05-18 14:15:13 +0000] [5701] [DEBUG] 4 workers
+[2017-05-18 14:16:22 +0000] [5701] [INFO] Handling signal: term
+[2017-05-18 14:16:22 +0000] [5701] [INFO] Shutting down: Master
+[2017-05-18 14:16:23 +0000] [5803] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7ffa695bf398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7ffa695bf0c8>
+  pre_fork: <function pre_fork at 0x7ffa695bf230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7ffa69632ed8>
+  pre_exec: <function pre_exec at 0x7ffa695bf938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7ffa695c31b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7ffa695bfaa0>
+  post_request: <function post_request at 0x7ffa695bfb90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7ffa695bf668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7ffa69632d70>
+  post_worker_init: <function post_worker_init at 0x7ffa695bf500>
+  child_exit: <function child_exit at 0x7ffa695bfcf8>
+  worker_exit: <function worker_exit at 0x7ffa695bfe60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7ffa695bf7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7ffa695c3050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:16:23 +0000] [5803] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:16:23 +0000] [5803] [DEBUG] Arbiter booted
+[2017-05-18 14:16:23 +0000] [5803] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (5803)
+[2017-05-18 14:16:23 +0000] [5803] [INFO] Using worker: sync
+[2017-05-18 14:16:23 +0000] [5810] [INFO] Booting worker with pid: 5810
+[2017-05-18 14:16:23 +0000] [5813] [INFO] Booting worker with pid: 5813
+[2017-05-18 14:16:23 +0000] [5814] [INFO] Booting worker with pid: 5814
+[2017-05-18 14:16:23 +0000] [5819] [INFO] Booting worker with pid: 5819
+[2017-05-18 14:16:23 +0000] [5803] [DEBUG] 4 workers
+[2017-05-18 14:22:29 +0000] [5803] [INFO] Handling signal: term
+[2017-05-18 14:22:29 +0000] [5803] [INFO] Shutting down: Master
+[2017-05-18 14:22:29 +0000] [6315] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f6e9c7eb398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f6e9c7eb0c8>
+  pre_fork: <function pre_fork at 0x7f6e9c7eb230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f6e9c85eed8>
+  pre_exec: <function pre_exec at 0x7f6e9c7eb938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f6e9c7ef1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f6e9c7ebaa0>
+  post_request: <function post_request at 0x7f6e9c7ebb90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f6e9c7eb668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f6e9c85ed70>
+  post_worker_init: <function post_worker_init at 0x7f6e9c7eb500>
+  child_exit: <function child_exit at 0x7f6e9c7ebcf8>
+  worker_exit: <function worker_exit at 0x7f6e9c7ebe60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f6e9c7eb7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f6e9c7ef050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:22:29 +0000] [6315] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:22:29 +0000] [6315] [DEBUG] Arbiter booted
+[2017-05-18 14:22:29 +0000] [6315] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (6315)
+[2017-05-18 14:22:29 +0000] [6315] [INFO] Using worker: sync
+[2017-05-18 14:22:29 +0000] [6322] [INFO] Booting worker with pid: 6322
+[2017-05-18 14:22:29 +0000] [6325] [INFO] Booting worker with pid: 6325
+[2017-05-18 14:22:29 +0000] [6326] [INFO] Booting worker with pid: 6326
+[2017-05-18 14:22:29 +0000] [6331] [INFO] Booting worker with pid: 6331
+[2017-05-18 14:22:29 +0000] [6315] [DEBUG] 4 workers
+[2017-05-18 14:23:35 +0000] [6315] [INFO] Handling signal: term
+[2017-05-18 14:23:35 +0000] [6315] [INFO] Shutting down: Master
+[2017-05-18 14:23:35 +0000] [6415] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f1c68ff7398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f1c68ff70c8>
+  pre_fork: <function pre_fork at 0x7f1c68ff7230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f1c6906aed8>
+  pre_exec: <function pre_exec at 0x7f1c68ff7938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f1c68ffb1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f1c68ff7aa0>
+  post_request: <function post_request at 0x7f1c68ff7b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f1c68ff7668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f1c6906ad70>
+  post_worker_init: <function post_worker_init at 0x7f1c68ff7500>
+  child_exit: <function child_exit at 0x7f1c68ff7cf8>
+  worker_exit: <function worker_exit at 0x7f1c68ff7e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f1c68ff77d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f1c68ffb050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:23:35 +0000] [6415] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:23:35 +0000] [6415] [DEBUG] Arbiter booted
+[2017-05-18 14:23:35 +0000] [6415] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (6415)
+[2017-05-18 14:23:35 +0000] [6415] [INFO] Using worker: sync
+[2017-05-18 14:23:35 +0000] [6422] [INFO] Booting worker with pid: 6422
+[2017-05-18 14:23:35 +0000] [6423] [INFO] Booting worker with pid: 6423
+[2017-05-18 14:23:35 +0000] [6428] [INFO] Booting worker with pid: 6428
+[2017-05-18 14:23:35 +0000] [6429] [INFO] Booting worker with pid: 6429
+[2017-05-18 14:23:35 +0000] [6415] [DEBUG] 4 workers
+[2017-05-18 14:25:19 +0000] [6415] [INFO] Handling signal: term
+[2017-05-18 14:25:19 +0000] [6415] [INFO] Shutting down: Master
+[2017-05-18 14:25:19 +0000] [6591] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f45b610a398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f45b610a0c8>
+  pre_fork: <function pre_fork at 0x7f45b610a230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f45b617ded8>
+  pre_exec: <function pre_exec at 0x7f45b610a938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f45b610e1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f45b610aaa0>
+  post_request: <function post_request at 0x7f45b610ab90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f45b610a668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f45b617dd70>
+  post_worker_init: <function post_worker_init at 0x7f45b610a500>
+  child_exit: <function child_exit at 0x7f45b610acf8>
+  worker_exit: <function worker_exit at 0x7f45b610ae60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f45b610a7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f45b610e050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:25:19 +0000] [6591] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:25:19 +0000] [6591] [DEBUG] Arbiter booted
+[2017-05-18 14:25:19 +0000] [6591] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (6591)
+[2017-05-18 14:25:19 +0000] [6591] [INFO] Using worker: sync
+[2017-05-18 14:25:19 +0000] [6598] [INFO] Booting worker with pid: 6598
+[2017-05-18 14:25:19 +0000] [6601] [INFO] Booting worker with pid: 6601
+[2017-05-18 14:25:19 +0000] [6604] [INFO] Booting worker with pid: 6604
+[2017-05-18 14:25:19 +0000] [6591] [DEBUG] 4 workers
+[2017-05-18 14:25:19 +0000] [6605] [INFO] Booting worker with pid: 6605
+[2017-05-18 14:26:59 +0000] [6591] [INFO] Handling signal: term
+[2017-05-18 14:26:59 +0000] [6591] [INFO] Shutting down: Master
+[2017-05-18 14:26:59 +0000] [6717] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f23c0bb3398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f23c0bb30c8>
+  pre_fork: <function pre_fork at 0x7f23c0bb3230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f23c0c26ed8>
+  pre_exec: <function pre_exec at 0x7f23c0bb3938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f23c0bb71b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f23c0bb3aa0>
+  post_request: <function post_request at 0x7f23c0bb3b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f23c0bb3668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f23c0c26d70>
+  post_worker_init: <function post_worker_init at 0x7f23c0bb3500>
+  child_exit: <function child_exit at 0x7f23c0bb3cf8>
+  worker_exit: <function worker_exit at 0x7f23c0bb3e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f23c0bb37d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f23c0bb7050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:26:59 +0000] [6717] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:26:59 +0000] [6717] [DEBUG] Arbiter booted
+[2017-05-18 14:26:59 +0000] [6717] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (6717)
+[2017-05-18 14:26:59 +0000] [6717] [INFO] Using worker: sync
+[2017-05-18 14:26:59 +0000] [6724] [INFO] Booting worker with pid: 6724
+[2017-05-18 14:26:59 +0000] [6727] [INFO] Booting worker with pid: 6727
+[2017-05-18 14:26:59 +0000] [6730] [INFO] Booting worker with pid: 6730
+[2017-05-18 14:27:00 +0000] [6733] [INFO] Booting worker with pid: 6733
+[2017-05-18 14:27:00 +0000] [6717] [DEBUG] 4 workers
+[2017-05-18 14:27:48 +0000] [6717] [INFO] Handling signal: term
+[2017-05-18 14:27:48 +0000] [6717] [INFO] Shutting down: Master
+[2017-05-18 14:27:48 +0000] [6806] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f41c6833398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f41c68330c8>
+  pre_fork: <function pre_fork at 0x7f41c6833230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f41c68a6ed8>
+  pre_exec: <function pre_exec at 0x7f41c6833938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f41c68371b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f41c6833aa0>
+  post_request: <function post_request at 0x7f41c6833b90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f41c6833668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f41c68a6d70>
+  post_worker_init: <function post_worker_init at 0x7f41c6833500>
+  child_exit: <function child_exit at 0x7f41c6833cf8>
+  worker_exit: <function worker_exit at 0x7f41c6833e60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f41c68337d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f41c6837050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:27:48 +0000] [6806] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:27:48 +0000] [6806] [DEBUG] Arbiter booted
+[2017-05-18 14:27:48 +0000] [6806] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (6806)
+[2017-05-18 14:27:48 +0000] [6806] [INFO] Using worker: sync
+[2017-05-18 14:27:48 +0000] [6813] [INFO] Booting worker with pid: 6813
+[2017-05-18 14:27:48 +0000] [6816] [INFO] Booting worker with pid: 6816
+[2017-05-18 14:27:48 +0000] [6819] [INFO] Booting worker with pid: 6819
+[2017-05-18 14:27:48 +0000] [6822] [INFO] Booting worker with pid: 6822
+[2017-05-18 14:27:48 +0000] [6806] [DEBUG] 4 workers
+[2017-05-18 14:28:55 +0000] [6806] [INFO] Handling signal: term
+[2017-05-18 14:28:56 +0000] [6806] [INFO] Shutting down: Master
+[2017-05-18 14:28:56 +0000] [6915] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f0a1f54a398>
+  errorlog: LOGFILE
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f0a1f54a0c8>
+  pre_fork: <function pre_fork at 0x7f0a1f54a230>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 500
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 4
+  proc_name: OJ
+  sendfile: None
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x7f0a1f5bded8>
+  pre_exec: <function pre_exec at 0x7f0a1f54a938>
+  worker_tmp_dir: None
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f0a1f54e1b8>
+  config: None
+  logconfig: None
+  check_config: False
+  statsd_prefix: 
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  reload_engine: auto
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f0a1f54aaa0>
+  post_request: <function post_request at 0x7f0a1f54ab90>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f0a1f54a668>
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/oj/WebServer
+  daemon: False
+  user: 500
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f0a1f5bdd70>
+  post_worker_init: <function post_worker_init at 0x7f0a1f54a500>
+  child_exit: <function child_exit at 0x7f0a1f54acf8>
+  worker_exit: <function worker_exit at 0x7f0a1f54ae60>
+  paste: None
+  default_proc_name: oj.wsgi:application
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  worker_abort: <function worker_abort at 0x7f0a1f54a7d0>
+  loglevel: debug
+  bind: ['unix:/home/ubuntu/oj/log/gunicorn.sock']
+  raw_env: []
+  initgroups: False
+  capture_output: False
+  reload: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x7f0a1f54e050>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2017-05-18 14:28:56 +0000] [6915] [INFO] Starting gunicorn 19.7.1
+[2017-05-18 14:28:56 +0000] [6915] [DEBUG] Arbiter booted
+[2017-05-18 14:28:56 +0000] [6915] [INFO] Listening at: unix:/home/ubuntu/oj/log/gunicorn.sock (6915)
+[2017-05-18 14:28:56 +0000] [6915] [INFO] Using worker: sync
+[2017-05-18 14:28:56 +0000] [6922] [INFO] Booting worker with pid: 6922
+[2017-05-18 14:28:56 +0000] [6925] [INFO] Booting worker with pid: 6925
+[2017-05-18 14:28:56 +0000] [6928] [INFO] Booting worker with pid: 6928
+[2017-05-18 14:28:56 +0000] [6929] [INFO] Booting worker with pid: 6929
+[2017-05-18 14:28:56 +0000] [6915] [DEBUG] 4 workers

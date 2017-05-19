@@ -107,14 +107,12 @@
                               <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-
-                            <li><a href="{% url 'submission_list' %}?vid={{ problem.virtual_id }}">Submissions of All</a></li>
+                            <li><a href="{% url 'submission_list' %}?pid={{ problem.problem_id }}">Submissions of All</a></li>
 
                             {% if user %}
-                                <li><a href="{% url 'submission_list' %}?user={{ user }}&vid={{ problem.virtual_id }}">Submissions of Mine</a></li>
+                                <li><a href="{% url 'submission_list' %}?user={{ user }}&pid={{ problem.problem_id }}">Submissions of Mine</a></li>
                             {% endif %}
-
-                        </ul>
+			</ul>
                     </div>
 
                     <!--<div class="container-fluid" style="margin-top: 15px;;margin-left: 5px;">-->

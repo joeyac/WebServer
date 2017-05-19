@@ -1,10 +1,10 @@
 #!/bin/bash
 
 NAME="OJ"                                  # Name of the application
-DJANGODIR=/home/rhyme/code/DEV/oj-master           # Django project directory
-SOCKFILE=/home/rhyme/code/DEV/run/gunicorn.sock  # we will communicte using this unix socket
-LOGFILE=/home/rhyme/code/DEV/run/gunicorn.log
-USER=rhyme                                        # the user to run as
+DJANGODIR=/home/ubuntu/oj/WebServer/         # Django project directory
+SOCKFILE=/home/ubuntu/oj/log/gunicorn.sock  # we will communicte using this unix socket
+LOGFILE=/home/ubuntu/oj/log/gunicorn.log
+USER=ubuntu                                        # the user to run as
 NUM_WORKERS=4                                     # how many worker processes should Gunicorn spawn
 DJANGO_SETTINGS_MODULE=oj.settings             # which settings file should Django use
 DJANGO_WSGI_MODULE=oj.wsgi                     # WSGI module name

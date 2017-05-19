@@ -21,15 +21,24 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9k3k39zpr_iisybgp8m(q0*5q-d$zccd53!q(b^j4jo+!f)4+n'
+SECRET_KEY = 'qw3k39zpr_iisybgp8m(q0*5q-d$zccd53!q(b^j4jo+!f)4+n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 if not DEBUG:
-    CSRF_COOKIE_SECURE = True
-    CSRF_COOKIE_HTTPONLY = True
-    X_FRAME_OPTIONS = 'DENY'
+    CSRF_COOKIE_DOMAIN = '127.0.0.1'
+    pass
+    # CSRF_COOKIE_SECURE = True
+    # CSRF_COOKIE_HTTPONLY = True
+    # SESSION_COOKIE_SECURE = True
+    # CSRF_TRUSTED_ORIGINS = ['localhost', '.jingwei.site']
+    SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+    # X_FRAME_OPTIONS = 'DENY'
+else:
+    SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+CSRF_FAILURE_VIEW = 'oj.views.csrf_failure'
 
 ALLOWED_HOSTS = ['*']
 
@@ -105,8 +114,13 @@ WSGI_APPLICATION = 'oj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'oj',
+	'USER': 'root',
+	'PASSWORD': 'x970307jw',
+	'default-character-set' : 'utf8',
+	'HOST': '',
+	'PORT': '',
     }
 }
 
@@ -299,12 +313,12 @@ TOKEN_BUCKET_DEFAULT_CAPACITY = 10
 TOKEN_BUCKET_FILL_RATE = 6
 
 # token for update status
-SERVER_TOKEN = 'server_token'
+SERVER_TOKEN = 'server_token_you'
 
 
 # queue
 # CELERY SETTINGS
-CELERY_BROKER_URL = 'amqp://xjw:password@localhost/oj'
+CELERY_BROKER_URL = 'amqp://xjw:x970307jw@localhost/oj'
 CELERY_RESULT_BACKEND = 'rpc://'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
@@ -314,4 +328,4 @@ CELERY_ENABLE_UTC = True
 
 
 # test case dir
-TEST_CASE_DIR = '/home/rhyme/code/DEV/oj-master/test_case/'
+TEST_CASE_DIR = '/home/ubuntu/oj/test_case/'

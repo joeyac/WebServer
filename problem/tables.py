@@ -87,7 +87,8 @@ class ProblemTable(Table):
 
 class LocalProblemTable(ProblemTable):
     class Meta:
-        model = Problem
+        id = 'problemtable'
+	model = Problem
         attrs = {'class': 'table-hover table-striped table-condensed'}
         search = True
         search_placeholder = 'search'

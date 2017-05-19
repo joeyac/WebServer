@@ -22,6 +22,12 @@ def acm_team(request):
     return render(request, "team.html")
 
 
+def csrf_failure(request, reason=""):
+    error_id = '403'
+    error_info = reason + u'<br>可以检查一下浏览器是否允许cookie<br>'
+    
+    return render(request, "403.html", {'id': error_id, 'info': error_info})
+
 def page_not_found(request):
     error_id = '404'
     error_info = '好像找不到你要的页面啊<br>哥们你是不是点错了<br>'
@@ -37,6 +43,7 @@ def page_error(request):
 def permission_denied(request):
     error_id = '403'
     error_info = '这个页面拒绝了你的访问<br>╮(╯▽╰)╭<br>'
+
     return render(request, "403.html", {'id': error_id, 'info': error_info})
 
 

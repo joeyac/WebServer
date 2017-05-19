@@ -177,6 +177,12 @@ def submission_list(request):
 
             form = QueryForm(form.clean())
 
+    if request.method == 'GET':
+        problem_id = request.GET.get('pid')
+        submissions = submissions.filter(problem__problem_id=problem_id) if problem_id else submissions
+        user = request.GET.get('user')
+        submissions = submissions.filter(user__username=user) if user else submissions
+
     if not form:
         form = QueryForm()
 
@@ -230,7 +236,7 @@ def submission_detail(request, submission_id):
 
     data = {'table': table, 'visible': visible, 'submission': submission_id, 'lang_name': lang_name,
             'src_code': src_code, 'compile_info': compile_info, 'test_case_info': test_case_info}
-    return render(request, 'submission/submission_list.html', data)
+    return render(request, 'submission/new_submission_list.html', data)
 
 
 class UpdateStatusAPIView(APIView):
